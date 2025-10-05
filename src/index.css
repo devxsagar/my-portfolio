@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import "tailwindcss";
 
 @font-face {
@@ -20,6 +21,8 @@
 }
 
 @theme {
+  --breakpoint-xs: 400px;
+  --font-caveat: "Caveat", cursive;
   --font-metamorphous: "Metamorphous", serif;
   --font-suisse-regular: "Suisse_Intl_Regular";
   --font-suisse-medium: "Suisse_Intl_Medium";
@@ -28,5 +31,10 @@
   --color-bg-secondary: #f5f5f5;
   --color-text-primary: #000000;
   --color-text-secondary: #646464;
-  --color-border: #e5e5e5;
+  --color-border: #d1d5db;
+  --color-orange: #db4500;
+}
+
+.hover-transition {
+  transition: all 0.2s ease-in-out;
 }

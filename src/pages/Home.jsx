@@ -1,8 +1,11 @@
-import React from 'react'
+import { jsLogo } from "../data/images"
+import Hero from "../sections/Hero"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="w-full max-md:px-[20px] xl:w-[1200px] mx-auto" >
+      <Hero />
+    </div>
   )
 }
 
