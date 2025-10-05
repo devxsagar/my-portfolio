@@ -3,6 +3,7 @@ import { motion, useMotionValue, useSpring } from "motion/react";
 import { div } from "motion/react-client";
 import { useNavigate } from "react-router-dom";
 import { Ghost, HatGlasses } from "lucide-react";
+import ButtonThreeD from "./ButtonThreeD";
 
 const AboutMeHoverPopUp = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const AboutMeHoverPopUp = () => {
   return (
     <button onClick={() => navigate("/about-me")}>
       <motion.div
-        className={`w-fit text-center  text-sm lg:text-xl text-[#ffffff] bg-orange px-3 py-2 rounded-3xl hidden group-hover:flex items-center gap-3 font-suisse-bold`}
+        className={`w-fit text-center  text-sm lg:text-xl text-[#ffffff] rounded-3xl hidden group-hover:flex items-center gap-3 font-suisse-bold`}
         style={{
           x: springX,
           y: springY,
@@ -41,8 +42,10 @@ const AboutMeHoverPopUp = () => {
           transform: "translate(-50%, -50%)",
         }}
       >
-        <span className="inline-block"><HatGlasses className="w-6 h-6"/></span>
-        About Sagar
+        {/* <span className="inline-block"></span> */}
+        <ButtonThreeD> 
+          About Sagar
+        </ButtonThreeD>
       </motion.div>
     </button>
   );

@@ -1,4 +1,3 @@
-import { jsLogo } from "../data/images"
 import Hero from "../sections/Hero"
 
 const Home = () => {

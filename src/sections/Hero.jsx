@@ -5,6 +5,7 @@ import { email } from "../utils/constants";
 import HeroFooter from "../components/HeroFooter";
 import { directionArrow } from "../data/images";
 import AboutMeHoverPopUp from "../components/AboutMeHoverPopUp";
+import ButtonThreeD from "../components/ButtonThreeD";
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);
