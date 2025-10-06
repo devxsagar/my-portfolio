@@ -34,6 +34,7 @@ const Navbar = () => {
       fixed top-5 left-1/2 -translate-x-1/2 
       rounded-4xl w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-12 
       flex items-center justify-between px-5 py-3 z-15
+      backdrop-blur-md
       "
     >
       <h2 className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl">
