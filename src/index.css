@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -16,20 +16,17 @@
 
 @font-face {
   font-family: "Suisse_Intl_Bold";
-  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Bold.ttf")
-    format("truetype");
+  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Suisse_Intl_Book";
-  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Book.ttf")
-    format("truetype");
+  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Book.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Suisse_Intl_Mono";
-  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Mono.ttf")
-    format("truetype");
+  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Mono.ttf") format("truetype");
 }
 
 @theme {
@@ -53,3 +50,4 @@
 .hover-transition {
   transition: all 0.2s ease-in-out;
 }
+
