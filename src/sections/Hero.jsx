@@ -83,11 +83,11 @@ const Hero = () => {
               software engineer
             </h2>
             <img
-              className="h-[85px] md:h-[130px] lg:h-[140px] xl:h-[150px] absolute z-20 -top-8 -right-20 md:-top-14 md:-right-34 lg:-right-34 rotate-160 md:rotate-160 opacity-50 select-none pointer-events-none"
+              className="h-[75px] md:h-[100px] lg:h-[120px] xl:h-[130px] absolute z-20 -top-4 -right-16 md:-top-5 md:-right-24 lg:-right-28 rotate-170 md:rotate-170 opacity-50 select-none pointer-events-none"
               src={directionArrow}
               alt="arrow"
             />
-            <div className="absolute group rotate-25 font-caveat leading-5 text-lg md:text-xl lg:text-2xl xl:text-3xl -top-18 -right-22 md:-top-19 md:-right-44 lg:-right-46 xl:-top-20 xl:-right-50">
+            <div className="absolute group rotate-30 font-caveat leading-5 text-lg md:text-xl lg:text-2xl xl:text-3xl -top-12 -right-22 md:-top-7 md:-right-37 lg:-top-8 lg:-right-46 xl:-top-10 xl:-right-50">
               <span className="text-text-secondary">Click for</span>{" "}
               <span className="md:hidden">
                 <br></br>

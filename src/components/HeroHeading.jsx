@@ -1,6 +1,5 @@
-import { motion, useSpring } from "motion/react";
+import { motion } from "motion/react";
 import { jsLogo, reactLogo } from "../data/images";
-import { useState } from "react";
 import AboutMeHoverPopUp from "./AboutMeHoverPopUp";
 import { useNavigate } from "react-router-dom";
 
