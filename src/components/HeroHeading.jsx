@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const HeroHeading = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full md:w-[700px] lg:w-full font-suisse-medium text-[32px] leading-10 md:text-[42px] md:leading-13 lg:text-[46px] lg:leading-14.5 xl:text-[54px] xl:leading-17">
+    <div className="w-full md:w-[700px] lg:w-full font-suisse-medium text-[32px] leading-10 md:text-[42px] md:leading-13 lg:text-[46px] lg:leading-14.5 xl:text-[54px] xl:leading-11 tracking-[-1.32px]">
       <h1 className="group w-fit mx-auto text-text-secondary text-center select-none" onClick={() => navigate("/about-me")}>
         Hi, I'm{" "}
         <span>

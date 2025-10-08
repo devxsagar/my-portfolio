@@ -1,21 +1,18 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import projectInfo from "../data/projectsInfo";
+import SectionHeader from "../components/SectionHeader";
 
 const Project = () => {
   return (
-    <section className="w-full min-h-screen pt-25 lg:pt-25">
-      <header className="text-center mb-10">
-        <h2 className=" text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] font-suisse-medium">
-          Selected Work
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl text-text-secondary mt-2">
-          Crafted with code, creativity, and curiosity
-        </p>
-      </header>
+    <section className="w-full min-h-screen pt-16 md:pt-20 lg:pt-28">
+      <SectionHeader
+        heading="Selected Work"
+        subHeading="Crafted with code, creativity, and curiosity"
+      />
 
       {/* Project Cards */}
-      <div className="px-3 lg:px-0 flex flex-col gap-5">
+      <div className="px-3 lg:px-0 flex flex-col gap-8 md:gap-10">
         {projectInfo.map((project) => {
           const id = crypto.randomUUID();
           return <ProjectCard key={id} data={project} />;

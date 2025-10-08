@@ -7,11 +7,14 @@ const ProjectCard = ({ data }) => {
     date,
     techStack,
     image,
+    color,
     githubLink,
     liveLink,
   } = data;
   return (
-    <article className="p-4 sm:p-6 md:p-8 md:min-h-[350px] max-w-md md:max-w-2xl lg:w-full lg:max-w-full mx-auto flex max-lg:flex-col-reverse justify-between rounded-xl max-lg:gap-8 gap-4 bg-bg-white border border-[#e7e7e7]">
+    <article className="p-4 sm:p-6 md:p-8 md:min-h-[350px] max-w-md md:max-w-2xl lg:w-full lg:max-w-full mx-auto flex max-lg:flex-col-reverse justify-between rounded-xl max-lg:gap-8 gap-4 bg-bg-white 
+    shadow-[0_3px_10px_rgb(0,0,0,0.2)]
+    ">
       {/* left side */}
       <div className=" flex flex-col justify-between gap-10 md:gap-12 lg:gap-5">
         <div className="space-y-3 md:space-y-4">
@@ -39,7 +42,8 @@ const ProjectCard = ({ data }) => {
               return (
                 <li
                   key={index}
-                  className="text-[10px] sm:text-xs md:text-sm border border-dashed border-orange px-2 sm:px-3 py-1 sm:py-1.5 rounded-md lg:rounded-lg bg-orange-100 text-orange"
+                  className="text-[10px] sm:text-xs md:text-sm  px-2 sm:px-3 py-1 sm:py-1.5 rounded-md lg:rounded-lg bg-[#f7f7f7]"
+                  style={{color: color}}
                 >
                   {tool}
                 </li>
@@ -49,8 +53,8 @@ const ProjectCard = ({ data }) => {
 
           {/* Links */}
           <div className="flex items-center gap-4 ml-1">
-            <ProjectLinkButton buttonName="GitHub" link={githubLink} />
-            <ProjectLinkButton buttonName="Live" link={liveLink} />
+            <ProjectLinkButton buttonName="GitHub" link={githubLink} color={color} />
+            <ProjectLinkButton buttonName="Live" link={liveLink} color={color} />
           </div>
         </div>
       </div>

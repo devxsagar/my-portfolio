@@ -9,6 +9,7 @@ import javascript from "../assets/icons/javascript.svg";
 import reactIcon from "../assets/icons/react.svg";
 import redux from "../assets/icons/redux.svg";
 import tailwind from "../assets/icons/tailwind.svg";
+import framerMotion from "../assets/icons/framer-motion.svg";
 import git from "../assets/icons/git.svg";
 import github from "../assets/icons/github.svg";
 import vscode from "../assets/icons/vscode.svg";
@@ -23,6 +24,7 @@ export const techStack = [
   { iconName: "React", icon: reactIcon },
   { iconName: "Redux", icon: redux },
   { iconName: "Tailwind", icon: tailwind },
+  { iconName: "Framer Motion", icon: framerMotion },
   { iconName: "Git", icon: git },
   { iconName: "GitHub", icon: github },
   { iconName: "VSCode", icon: vscode },

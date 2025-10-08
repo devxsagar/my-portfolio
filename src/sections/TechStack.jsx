@@ -1,18 +1,15 @@
 import Marquee from "../components/Marquee";
+import SectionHeader from "../components/SectionHeader";
 import { techStack } from "../data/images";
 import { motion } from "motion/react";
 
 const TechStack = () => {
   return (
-    <section className="pt-30 pb-30">
-      <header className="text-center mb-10">
-        <h2 className=" text-3xl sm:text-[32px] md:text-[36px] lg:text-[42px] font-suisse-medium">
-          What I Build With
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl text-text-secondary mt-2">
-          Tools that fuel my creativity and clean code
-        </p>
-      </header>
+    <section className="pt-16 md:pt-20 lg:pt-28 pb-30">
+      <SectionHeader
+        heading="What I Build With"
+        subHeading="Tools that fuel my creativity and clean code"
+      />
 
       <div className="container mx-auto">
         <div className="flex overflow-x-hidden relative">

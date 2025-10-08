@@ -8,6 +8,7 @@ const projectInfo = [
     date: "aug 2025",
     techStack: ["React", "JavaScript", "Tailwind CSS", "Framer Motion"],
     image: periodicTable,
+    color: "#7367fd",
     githubLink: "https://github.com/devxsagar/Periodic-Table#",
     liveLink: "https://periodic-table-devwithsagar.vercel.app/",
   },

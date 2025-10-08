@@ -6,7 +6,7 @@ const NavLink = ({ link }) => {
     <motion.div
       initial="initial"
       whileHover="hovered"
-      className="relative overflow-hidden hover:text-orange transition-all duration-200 ease-linear"
+      className="relative overflow-hidden text-text-primary hover:text-text-secondary  transition-all duration-200 ease-linear"
       style={{ lineHeight: 0.92 }}
     >
       <Link to={link.href}>
@@ -19,7 +19,7 @@ const NavLink = ({ link }) => {
                 variants={{ initial: { y: 0 }, hovered: { y: "-100%" } }}
                 transition={{
                   duration: 0.15,
-                  delay: 0.08 * i,
+                  delay: 0.03 * i,
                   ease: "easeInOut",
                 }}
                 className="inline-block"
@@ -38,7 +38,7 @@ const NavLink = ({ link }) => {
                 variants={{ initial: { y: "110%" }, hovered: { y: 0 } }}
                 transition={{
                   duration: 0.15,
-                  delay: 0.08 * i,
+                  delay: 0.03 * i,
                   ease: "easeInOut",
                 }}
                 className="inline-block"

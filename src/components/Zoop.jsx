@@ -16,7 +16,7 @@ const Zoop = ({text}) => {
               key={i}
               className="inline-block"
               variants={{ initial: { y: 0 }, hovered: { y: "-110%" } }}
-              transition={{ duration: 0.15, delay: 0.06 * i, ease: "easeInOut" }}
+              transition={{ duration: 0.15, delay: 0.03 * i, ease: "easeInOut" }}
             >
               {l}
             </motion.span>
@@ -30,7 +30,7 @@ const Zoop = ({text}) => {
               key={i}
               className="inline-block"
               variants={{ initial: { y: "110%" }, hovered: { y: "0" } }}
-              transition={{ duration: 0.15, delay: 0.06 * i, ease: "easeInOut" }}
+              transition={{ duration: 0.15, delay: 0.03 * i, ease: "easeInOut" }}
             >
               {l}
             </motion.span>
