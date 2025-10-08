@@ -50,7 +50,7 @@ const Hero = () => {
               software engineer
             </h2>
             <img
-              className="h-[85px] md:h-[130px] lg:h-[140px] xl:h-[150px] absolute z-20 -top-8 -right-20 md:-top-14 md:-right-34 lg:-right-34 rotate-160 md:rotate-160 opacity-50 "
+              className="h-[85px] md:h-[130px] lg:h-[140px] xl:h-[150px] absolute z-20 -top-8 -right-20 md:-top-14 md:-right-34 lg:-right-34 rotate-160 md:rotate-160 opacity-50 select-none pointer-events-none"
               src={directionArrow}
               alt="arrow"
             />
