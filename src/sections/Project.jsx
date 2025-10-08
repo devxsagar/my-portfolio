@@ -10,12 +10,12 @@ const Project = () => {
           Selected Work
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-text-secondary mt-2">
-          Crafted with code, creativity, and curiosity.
+          Crafted with code, creativity, and curiosity
         </p>
       </header>
 
       {/* Project Cards */}
-      <div className="px-3 lg:px-0">
+      <div className="px-3 lg:px-0 flex flex-col gap-5">
         {projectInfo.map((project) => {
           const id = crypto.randomUUID();
           return <ProjectCard key={id} data={project} />;
