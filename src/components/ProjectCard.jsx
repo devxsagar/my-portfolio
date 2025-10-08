@@ -13,9 +13,9 @@ const ProjectCard = ({ data }) => {
   return (
     <article className="p-4 sm:p-6 md:p-8 md:min-h-[350px] max-w-md md:max-w-2xl lg:w-full lg:max-w-full mx-auto flex max-lg:flex-col-reverse justify-between rounded-xl max-lg:gap-8 gap-4 bg-bg-white border border-[#e7e7e7]">
       {/* left side */}
-      <div className=" flex flex-col justify-between gap-6 md:gap-8">
+      <div className=" flex flex-col justify-between gap-10 md:gap-12 lg:gap-5">
         <div className="space-y-3 md:space-y-4">
-          {/* Project Name and Date */}
+          {/* Date */}
           <div className="font-suisse-mono text-[10px] sm:text-xs md:text-sm uppercase text-text-secondary">
             {date}
           </div>
@@ -32,16 +32,16 @@ const ProjectCard = ({ data }) => {
         </div>
 
         {/* Tech Stack and Links */}
-        <div className="flex flex-col gap-2 sm:gap-5">
+        <div className="flex flex-col gap-6 md:gap-6 lg:gap-9">
           {/* Tech Stack */}
           <ul className="text-text-secondary flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none">
-            {techStack.map((data, index) => {
+            {techStack.map((tool, index) => {
               return (
                 <li
                   key={index}
-                  className="text-[10px] sm:text-xs md:text-sm border border-[#e7e7e7] px-2 sm:px-3 py-1 sm:py-1.5 rounded-md lg:rounded-lg hover:border-text-secondary transition-colors"
+                  className="text-[10px] sm:text-xs md:text-sm border border-dashed border-orange px-2 sm:px-3 py-1 sm:py-1.5 rounded-md lg:rounded-lg bg-orange-100 text-orange"
                 >
-                  {data}
+                  {tool}
                 </li>
               );
             })}
