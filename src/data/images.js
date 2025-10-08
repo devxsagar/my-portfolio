@@ -9,9 +9,11 @@ import javascript from "../assets/icons/javascript.svg";
 import reactIcon from "../assets/icons/react.svg";
 import redux from "../assets/icons/redux.svg";
 import tailwind from "../assets/icons/tailwind.svg";
+import shadcn from "../assets/icons/shadcn-ui.svg";
 import framerMotion from "../assets/icons/framer-motion.svg";
 import git from "../assets/icons/git.svg";
 import github from "../assets/icons/github.svg";
+import vercel from "../assets/icons/vercel.svg";
 import vscode from "../assets/icons/vscode.svg";
 import figma from "../assets/icons/figma.svg";
 
@@ -24,7 +26,9 @@ export const techStack = [
   { iconName: "React", icon: reactIcon },
   { iconName: "Redux", icon: redux },
   { iconName: "Tailwind", icon: tailwind },
+  { iconName: "Shadcn", icon: shadcn },
   { iconName: "Framer Motion", icon: framerMotion },
+  { iconName: "Vercel", icon: vercel },
   { iconName: "Git", icon: git },
   { iconName: "GitHub", icon: github },
   { iconName: "VSCode", icon: vscode },
