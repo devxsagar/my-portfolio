@@ -7,14 +7,18 @@ import { useNavigate } from "react-router-dom";
 const HeroHeading = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full md:w-[700px] lg:w-full font-suisse-medium text-[32px] leading-10 md:text-[42px] md:leading-13 lg:text-[46px] lg:leading-14.5 xl:text-[54px] xl:leading-11 tracking-[-1.32px]">
+    <div className="w-full md:w-[700px] lg:w-full font-suisse-medium text-[28px] leading-9 
+md:text-[36px] md:leading-11 
+lg:text-[40px] lg:leading-12 
+xl:text-[46px] xl:leading-[56px] 
+tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]">
       <h1 className="group w-fit mx-auto text-text-secondary text-center select-none" onClick={() => navigate("/about-me")}>
         Hi, I'm{" "}
         <span>
           <motion.img
             src="/pp.jpg"
             alt="profile pic"
-            className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] border border-border rounded-xl md:rounded-2xl lg:rounded-3xl inline"
+            className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] border border-border rounded-lg md:rounded-xl lg:rounded-2xl inline"
             whileHover={{
               // scale: 1.5,
               rotate: -12,
@@ -32,7 +36,7 @@ const HeroHeading = () => {
           <motion.img
             src={reactLogo}
             alt="react logo"
-            className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] inline "
+            className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
             whileHover={{
               // scale: 1.5,
               rotate: 12,
@@ -50,7 +54,7 @@ const HeroHeading = () => {
           <motion.img
             src={jsLogo}
             alt="javascript logo"
-            className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px] xl:w-[80px] xl:h-[80px] inline "
+            className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
             whileHover={{
               // scale: 1.5,
               rotate: -12,
