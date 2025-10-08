@@ -1,10 +1,11 @@
 import Hero from "../sections/Hero"
+import Project from "../sections/Project"
 
 const Home = () => {
   return (
-    <div className="w-full max-md:px-[20px] xl:w-[1200px] mx-auto" >
+    <div className="w-full max-sm:px-[10px] max-md:px-[20px] xl:w-[1200px] mx-auto" >
       <Hero />
-      <Hero />
+      <Project />
     </div>
   )
 }

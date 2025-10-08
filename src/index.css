@@ -15,6 +15,18 @@
 }
 
 @font-face {
+  font-family: "Suisse_Intl_Bold";
+  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Suisse_Intl_Book";
+  src: url("./assets/fonts/fonnts.com-Suisse_Intl_Book.ttf")
+    format("truetype");
+}
+
+@font-face {
   font-family: "Suisse_Intl_Mono";
   src: url("./assets/fonts/fonnts.com-Suisse_Intl_Mono.ttf")
     format("truetype");
@@ -26,7 +38,10 @@
   --font-metamorphous: "Metamorphous", serif;
   --font-suisse-regular: "Suisse_Intl_Regular";
   --font-suisse-medium: "Suisse_Intl_Medium";
+  --font-suisse-bold: "Suisse_Intl_Bold";
+  --font-suisse-book: "Suisse_Intl_Book";
   --font-suisse-mono: "Suisse_Intl_Mono";
+  --color-bg-white: #ffffff;
   --color-bg-primary: #fafafa;
   --color-bg-secondary: #f5f5f5;
   --color-text-primary: #000000;

@@ -5,7 +5,7 @@ import { email, location } from "../utils/constants";
 
 const HeroFooter = ({handleCopy, copied}) => {
   return (
-    <div className="w-[calc(100%-10px)] left-1/2 -translate-x-1/2 lg:w-full absolute  bottom-6 flex items-center justify-between text-[9px] md:text-sm lg:text-base select-none font-suisse-mono">
+    <div className="w-[calc(100%-20px)] lg:w-full absolute left-1/2 -translate-x-1/2 bottom-6 flex items-center justify-between text-[9px] md:text-sm lg:text-base select-none font-suisse-mono">
       {/* Email */}
       <button onClick={handleCopy} className="group text-text-secondary">
         {copied ? (
