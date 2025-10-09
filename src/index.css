@@ -31,6 +31,7 @@
 
 @theme {
   --breakpoint-xs: 400px;
+
   --font-caveat: "Caveat", cursive;
   --font-metamorphous: "Metamorphous", serif;
   --font-suisse-regular: "Suisse_Intl_Regular";
@@ -38,14 +39,17 @@
   --font-suisse-bold: "Suisse_Intl_Bold";
   --font-suisse-book: "Suisse_Intl_Book";
   --font-suisse-mono: "Suisse_Intl_Mono";
+
   --color-bg-white: #ffffff;
   --color-bg-primary: #fafafa;
   --color-bg-secondary: #f5f5f5;
   --color-bg-black: #1a1a1a;
+
   --color-text-primary: #000000;
   --color-text-secondary: #646464;
   --color-text-white: #fafafa;
   --color-text-grey: #5c5c63;
+  
   --color-border: #d1d5db;
   --color-orange: #db4500;
 }

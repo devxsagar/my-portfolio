@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const Footer = () => {
   return (
     <motion.footer
-      className="relative min-h-[30rem] bg-bg-black text-text-white py-10 overflow-hidden "
+      className="relative min-h-[30rem] bg-bg-black text-text-white py-10 md:mt-20 lg:mt-28 overflow-hidden "
       initial={{ opacity: 0, height: 0 }}
       whileInView={{
         opacity: 1,
