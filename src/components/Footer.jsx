@@ -31,29 +31,36 @@ const Footer = () => {
 
       <div className="flex flex-col justify-between w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] max-md:min-h-[20rem] max-lg:min-h-[18rem] min-h-[20rem] mx-auto relative z-10">
         {/* top */}
-        <div className="pt-10 flex items-start justify-between max-lg:flex-col-reverse max-lg:items-center  max-md:min-h-[20rem] max-lg:min-h-[18rem] relative z-10">
-          <div className="flex items-center gap-2 relative z-10">
-            <div className="bg-emerald-500 w-2.5 h-2.5 rounded-full animate-pulse" />
-            <p className="text-base">Open to work and opportunities</p>
+        <div className="pt-10 flex items-start justify-between max-lg:flex-col max-lg:items-center  max-md:min-h-[20rem] max-lg:min-h-[18rem] relative z-10">
+          <div className="flex flex-col gap-8">
+            <p className="text-3xl">Let's talk!</p>
+            <div className="flex items-center justify-between gap-3 h-fit" style={{lineHeight: 0.7}}>
+              <a className="text-xl">
+                <Zoop text="mitrasagar2001@gmail.com" />
+              </a>
+              <ArrowUpRight />
+            </div>
           </div>
+
           <div className="flex flex-col gap-5 relative z-10">
             {footerLinks.map((obj, index) => {
               return (
-                <Link
+                <a
                   key={index}
-                  to={obj.href}
+                  href={obj.href}
+                  target="_blank"
                   className="text-xl text-text-grey hover:text-text-white h-fit hover-transition"
                 >
                   <div className="flex items-center justify-between w-32 h-fit">
                     <Zoop text={obj.link} />
                     <ArrowUpRight />
                   </div>
-                </Link>
+                </a>
               );
             })}
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center max-md:mt-5">
           <div className="flex items-center gap-2 relative z-10">
             <div className="bg-emerald-500 w-2.5 h-2.5 rounded-full animate-pulse" />
             <p className="text-base">Open to work and opportunities</p>
