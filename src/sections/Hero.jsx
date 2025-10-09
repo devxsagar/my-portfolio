@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center">
       {/* Background Line Effect */}
-      <div
+      {/* <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `
@@ -69,7 +69,7 @@ const Hero = () => {
           maskComposite: "intersect",
           WebkitMaskComposite: "source-in",
         }}
-      />
+      /> */}
 
       {/* Main Content */}
       <div className="z-10">
