@@ -1,11 +1,9 @@
 import Marquee from "../components/Marquee";
 import SectionHeader from "../components/SectionHeader";
-import { techStack } from "../data/images";
-import { motion } from "motion/react";
 
 const TechStack = () => {
   return (
-    <section className="pt-16 md:pt-20 lg:pt-28 pb-30">
+    <section className="pt-40 md:pt-52 lg:pt-58 pb-30 md:pb-40 lg:pb-50">
       <SectionHeader
         heading="What I Build With"
         subHeading="Tools that fuel my creativity and clean code"

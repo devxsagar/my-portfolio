@@ -2,6 +2,7 @@ import jsLogo from "../assets/icons/javascript_icon.png";
 import reactLogo from "../assets/icons/react_icon.png";
 import directionArrow from "../assets/icons/direction_arrow.png";
 import logo from "../assets/icons/logo.png";
+import asterisk from "../assets/icons/asterisk.png";
 import periodicTable from "../assets/images/periodic-table.jpg";
 import html from "../assets/icons/html.svg";
 import css from "../assets/icons/css.svg";
@@ -17,7 +18,7 @@ import vercel from "../assets/icons/vercel.svg";
 import vscode from "../assets/icons/vscode.svg";
 import figma from "../assets/icons/figma.svg";
 
-export { reactLogo, jsLogo, directionArrow, logo, periodicTable };
+export { reactLogo, jsLogo, directionArrow, logo, periodicTable, asterisk };
 
 export const techStack = [
   { iconName: "Html", icon: html },
