@@ -1,3 +1,5 @@
+import RevealTextEffect from "./RevealTextEffect";
+
 const SectionHeader = ({ heading, subHeading }) => {
   return (
     <header className="text-center mb-8 md:mb-10 lg:mb-16">
@@ -9,7 +11,7 @@ const SectionHeader = ({ heading, subHeading }) => {
         {heading}
       </h2>
       <p className=" max-sm:max-w-[70vw] mx-auto tracking-tight text-2xl sm:text-3xl md:text-[3rem] font-suisse-medium mt-5">
-        {subHeading}
+        <RevealTextEffect text={subHeading} />
       </p>
     </header>
   );
