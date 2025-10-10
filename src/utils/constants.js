@@ -11,3 +11,9 @@ export const footerLinks = [
   {link: "Instagram", href: ""},
   {link: "GitHub", href: ""},
 ]
+
+export const quickLinks = [
+  {link: "Home", href: "/"},
+  {link: "About", href: "/about-me"},
+  {link: "Projects", href: "/projects"},
+]

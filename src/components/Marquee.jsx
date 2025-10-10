@@ -5,7 +5,7 @@ import { techStack } from "../data/images";
 const Marquee = () => {
   return (
     <motion.div
-      className=" flex py-5 sm:py-7 lg:py-10 shrink-0 overflow-y-hidden"
+      className=" flex pb-5 sm:pb-7 lg:pb-10 shrink-0 overflow-y-hidden"
       initial={{ x: 0 }}
       animate={{ x: "-100%" }}
       transition={{
