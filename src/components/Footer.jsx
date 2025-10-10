@@ -5,8 +5,6 @@ import FooterLink from "./FooterLink";
 const Footer = () => {
   return (
     <footer
-      initial="initial"
-      whileInView="inView"
       className="relative  text-text-white pt-8 pb-5 lg:py-10  overflow-hidden "
     >
       {/* Background Pattern */}

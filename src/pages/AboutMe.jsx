@@ -1,27 +1,52 @@
-import WorkInProgress from "../components/WorkInProgress";
+import SectionHeader from "../components/SectionHeader";
+import Education from "../sections/Education";
+import { storySoFar } from "../utils/constants";
 
 const AboutMe = () => {
   return (
-    <div className="relative min-h-screen pt-40 pb-30 md:pb-40 lg:pb-50">
-      {/* Circuit Board - Light Pattern */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
-        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
-      `,
-          backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
-        }}
-      />
+    <div className="relative min-h-screen pt-10 pb-30 md:pb-40 lg:pb-50">
+      <div className="w-full xl:w-[1200px] px-[2rem] sm:px-[3rem] md:px-[4rem] lg:px-[5rem] mx-auto">
+        {/* About Me */}
+        <section >
+          <div className="flex items-center justify-center">
+            <SectionHeader heading="My journey" subHeading="About Sagar" />
+            
+          </div>
+          <article >
+            <h3 className="font-suisse-mono font-extrabold text-base text-text-grey opacity-70 ">
+              The Story So Far
+            </h3>
+            <p className="text-[15px] md:text-base text-text-light mt-3 leading-relaxed">
+              {storySoFar}
+            </p>
+          </article>
 
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-sm:px-[10px] max-md:px-[20px] xl:w-[1200px] mx-auto z-30">
-        <WorkInProgress />
+          <article className="mt-10">
+            <h3 className="font-suisse-mono font-extrabold text-base text-text-grey opacity-70 ">
+              The Story So Far
+            </h3>
+            <p className="text-[15px] md:text-base text-text-light mt-3 leading-relaxed">
+              {storySoFar}
+            </p>
+          </article>
+        </section>
+
+        {/* Education */}
+        <section className="mt-16 md:mt-20 lg:mt-24">
+          <div>
+            <SectionHeader
+              heading="My Education"
+              subHeading="The learning path that shaped me"
+            />
+          </div>
+          <article >
+            <Education />
+          </article>
+        </section>
       </div>
     </div>
   );
 };
 
 export default AboutMe;
+
