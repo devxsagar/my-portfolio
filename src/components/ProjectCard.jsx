@@ -28,7 +28,7 @@ const ProjectCard = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <article ref={containerRef} className="sticky mt-10 top-10 lg:top-15">
+    <article ref={containerRef} className="sticky top-10 lg:top-15">
       <motion.div
         className="p-4 sm:p-6 md:p-8 md:min-h-[350px] max-w-md md:max-w-2xl lg:w-full lg:max-w-full mx-auto flex max-lg:flex-col-reverse justify-between rounded-xl max-lg:gap-8 gap-4 
         shadow-[0_3px_10px_rgb(0,0,0,0.2)] relative"
