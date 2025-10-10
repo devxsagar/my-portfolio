@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import HeroHeading from "../components/HeroHeading";
-import { email } from "../utils/constants";
-import HeroFooter from "../components/HeroFooter";
 import { directionArrow } from "../data/images";
+import { email } from "../utils/constants";
+import HeroHeading from "../components/HeroHeading";
+import HeroFooter from "../components/HeroFooter";
 
 const Hero = () => {
   const [copied, setCopied] = useState(false);

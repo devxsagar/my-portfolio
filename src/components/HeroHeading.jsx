@@ -1,7 +1,7 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { jsLogo, reactLogo } from "../data/images";
 import AboutMeHoverPopUp from "./AboutMeHoverPopUp";
-import { useNavigate } from "react-router-dom";
 
 const HeroHeading = () => {
   const navigate = useNavigate();

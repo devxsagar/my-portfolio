@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
-import Zoop from "./Zoop";
-import { footerLinks, quickLinks } from "../utils/constants";
-import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
+import { footerLinks, quickLinks } from "../utils/constants";
 import FooterLink from "./FooterLink";
 
 const Footer = () => {

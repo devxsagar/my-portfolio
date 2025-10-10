@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { asterisk } from "../data/images";
-import { ArrowLeft } from "lucide-react";
 
 const WorkInProgress = () => {
   return (

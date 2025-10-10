@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { motion, useMotionValue, useSpring } from "motion/react";
-import { div } from "motion/react-client";
 import { useNavigate } from "react-router-dom";
-import { Ghost, HatGlasses } from "lucide-react";
+import { motion, useMotionValue, useSpring } from "motion/react";
+import { HatGlasses } from "lucide-react";
 
 const AboutMeHoverPopUp = () => {
   const navigate = useNavigate();

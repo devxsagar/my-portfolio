@@ -1,8 +1,8 @@
-import { motion, useScroll } from "motion/react";
-import ProjectCard from "../components/ProjectCard";
-import projectInfo from "../data/projectsInfo";
-import SectionHeader from "../components/SectionHeader";
 import { useRef } from "react";
+import { useScroll } from "motion/react";
+import ProjectCard from "../components/ProjectCard";
+import SectionHeader from "../components/SectionHeader";
+import projectInfo from "../data/projectsInfo";
 
 const Project = () => {
   const containerRef = useRef();

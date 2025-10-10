@@ -1,7 +1,7 @@
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import NavLink from "./NavLink";
 import { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { navLinks } from "../utils/constants";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
   const [hideNav, setHideNav] = useState(false);
