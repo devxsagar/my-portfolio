@@ -6,12 +6,17 @@ import AboutMeHoverPopUp from "./AboutMeHoverPopUp";
 const HeroHeading = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full md:w-[700px] lg:w-full font-suisse-medium text-[28px] leading-9 
-md:text-[36px] md:leading-11 
-lg:text-[40px] lg:leading-12 
-xl:text-[46px] xl:leading-[56px] 
-tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]">
-      <h1 className="group w-fit mx-auto text-text-secondary text-center select-none" onClick={() => navigate("/about-me")}>
+    <div
+      className="w-full md:w-[700px] lg:w-full font-suisse-medium 
+      text-[28px] leading-9 md:text-[36px] md:leading-11 lg:text-[40px] lg:leading-12 xl:text-[46px] xl:leading-[56px] tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]"
+    >
+      <h1
+        className="group w-fit mx-auto text-text-secondary text-center select-none"
+        onClick={() => {
+          navigate("/about-me");
+          window.scrollTo({top: 0, behavior: "smooth"})
+        }}
+      >
         Hi, I'm{" "}
         <span>
           <motion.img
