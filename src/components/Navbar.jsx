@@ -39,7 +39,7 @@ const Navbar = () => {
       </h2>
 
       {/* Nav links */}
-      <div className="text-sm gap-5 lg:text-lg flex items-center lg:gap-8">
+      <div className="text-sm lg:text-lg flex items-center gap-5 lg:gap-8 font-suisse-medium">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
