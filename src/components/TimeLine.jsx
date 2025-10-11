@@ -1,9 +1,9 @@
 
-const TimeLine = ({ year, instituteName, degree }) => {
+const TimeLine = ({ year, course, instructor, source }) => {
   return (
     <div className="flex gap-x-3">
       {/* Left Content */}
-      <div className="w-25 min-w-25 text-end">
+      <div className="w-50 min-w-25 text-end">
         <span className="text-xs md:text-sm lg:text-base text-text-secondary">{year}</span>
       </div>
       {/* End Left Content */}
@@ -20,10 +20,13 @@ const TimeLine = ({ year, instituteName, degree }) => {
       <div className="grow pt-0.5 pb-8">
         <h3 className="flex gap-x-1.5 font-semibold text-text-primary text-sm md:text-base lg:text-lg">
           
-          {instituteName}
+          {course}
         </h3>
         <p className="mt-1 text-xs md:text-sm lg:text-base text-text-secondary leading-relaxed">
-          {degree}
+          {instructor}
+        </p>
+        <p className="mt-1 text-xs md:text-sm lg:text-base text-text-secondary leading-relaxed">
+          {source}
         </p>
       </div>
       {/* End Right Content */}

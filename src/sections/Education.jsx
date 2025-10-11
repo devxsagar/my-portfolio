@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import TimeLine from "../components/TimeLine";
 import { educationDetails } from "../utils/constants";
 

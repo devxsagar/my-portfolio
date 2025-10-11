@@ -49,7 +49,7 @@
   --color-text-secondary: #646464;
   --color-text-white: #fafafa;
   --color-text-grey: #5c5c63;
-  
+
   --color-border: #d1d5db;
   --color-orange: #db4500;
 }
@@ -58,3 +58,8 @@
   transition: all 0.3s ease-in-out;
 }
 
+@layer components {
+  .highlight {
+    @apply font-suisse-bold;
+  }
+}

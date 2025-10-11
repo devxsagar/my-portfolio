@@ -43,7 +43,7 @@ const HeroFooter = () => {
         </span>
 
         <motion.span
-          className={`absolute left-1/2 -translate-x-1/2 -top-10 font-caveat text-xl whitespace-nowrap 
+          className={`absolute left-1/2 -translate-x-1/2 -top-8 md:-top-10 font-caveat text-xs md:text-base lg:text-xl whitespace-nowrap 
           `}
           animate={emailHovered ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.3 }}
