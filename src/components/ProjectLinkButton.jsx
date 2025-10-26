@@ -7,7 +7,7 @@ const ProjectLinkButton = ({ buttonName, link, color }) => {
     <motion.div initial="initial"
       whileHover="hovered">
       <Link
-        className="flex items-center gap-1 overflow-hidden  rounded-xl text-xs sm:text-sm md:text-base text-text-secondary transition-colors font-suisse-mono font-semibold cursor-pointer"
+        className="flex items-center gap-1 overflow-hidden  rounded-xl text-xs sm:text-sm md:text-base text-text-secondary-alt hover:text-text-primary transition-colors font-suisse-mono font-semibold cursor-pointer"
         to={link}
       >
         {buttonName}{" "}
