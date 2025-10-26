@@ -29,6 +29,11 @@
   src: url("./assets/fonts/fonnts.com-Suisse_Intl_Mono.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Suisse_Intl_Light";
+  src: url("./assets/fonts/fonnts.com-SuisseIntl-Light.ttf") format("truetype");
+}
+
 @theme {
   --breakpoint-xs: 400px;
 
@@ -39,6 +44,7 @@
   --font-suisse-bold: "Suisse_Intl_Bold";
   --font-suisse-book: "Suisse_Intl_Book";
   --font-suisse-mono: "Suisse_Intl_Mono";
+  --font-suisse-light: "Suisse_Intl_light";
 
   --color-bg-white: #ffffff;
   --color-bg-primary: #fafafa;
@@ -47,11 +53,13 @@
 
   --color-text-primary: #000000;
   --color-text-secondary: #646464;
+  --color-text-secondary-alt: #363248;
   --color-text-white: #fafafa;
   --color-text-grey: #5c5c63;
 
   --color-border: #d1d5db;
   --color-orange: #db4500;
+  --color-blue: #0057ff;
 }
 
 .hover-transition {
@@ -59,7 +67,11 @@
 }
 
 @layer components {
+  /* .highlight {
+    @apply bg-[#f7846d]/20 px-0.5 py-1 rounded-sm  mr-1;
+  } */
+
   .highlight {
-    @apply font-suisse-bold;
+    @apply text-blue font-suisse-medium;
   }
 }

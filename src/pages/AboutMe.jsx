@@ -19,7 +19,7 @@ const AboutMe = () => {
             <h3 className="font-suisse-mono font-extrabold text-[14px] text-base text-text-grey opacity-70 ">
               How It All Began
             </h3>
-            <p className="text-[14px] md:text-base text-text-light mt-3 leading-relaxed">
+            <p className="text-[14px] md:text-base text-text-secondary-alt mt-3 tracking-wide leading-relaxed">
               {howItBegan}
             </p>
           </article>
@@ -28,7 +28,7 @@ const AboutMe = () => {
             <h3 className="font-suisse-mono text-[14px] font-extrabold text-base text-text-grey opacity-70 ">
               What I Do Now
             </h3>
-            <p className="text-[14px] md:text-base text-text-light mt-3 leading-relaxed">
+            <p className="text-[14px] md:text-base font-suisse-regular text-text-secondary-alt mt-3 tracking-wide leading-relaxed">
               I build modern web applications using <span className="highlight">React.js, JavaScript, and
               Tailwind CSS,</span> focusing on creating interfaces that are both
               beautiful and functional. From responsive layouts to seamless user
