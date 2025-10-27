@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { navLinks } from "../utils/constants";
 import NavLink from "./NavLink";
+import { logo } from "../data/images";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [hideNav, setHideNav] = useState(false);
@@ -30,16 +32,17 @@ const Navbar = () => {
       border border-border
       fixed top-5 left-1/2 -translate-x-1/2 
       rounded-4xl w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-12 
-      flex items-center justify-between px-5 py-3 z-15
+      flex items-center justify-between px-4 lg:pl-10 py-3 z-15
       backdrop-blur-md
       "
     >
-      <h2 className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl">
-        sm
-      </h2>
+      {/* Logo  */}
+      <Link to="/" className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        <img src={logo} alt="logo" className="w-5 md:w-7 lg:w-8" />
+      </Link>
 
       {/* Nav links */}
-      <div className="text-sm lg:text-lg flex items-center gap-5 lg:gap-8 font-suisse-medium">
+      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-suisse-medium">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
