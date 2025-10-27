@@ -7,9 +7,11 @@ const RevealTextEffect = ({ text }) => {
     return (
       <motion.span
         key={i}
-        initial={{ opacity: 0, filter: "blur(10px)" }}
+        className="inline-block"
+        initial={{ opacity: 0, y: 20 ,filter: "blur(10px)" }}
         whileInView={{
           opacity: 1,
+          y: 0,
           filter: "blur(0px)",
           transition: { duration: 1, delay: i * LETTER_DELAY, ease:"backInOut" },
         }}
@@ -18,7 +20,7 @@ const RevealTextEffect = ({ text }) => {
           amount: 0.3,
         }}
       >
-        {l}
+        {l === " " ? "\u00A0" : l}
       </motion.span>
     );
   });
