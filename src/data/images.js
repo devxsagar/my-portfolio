@@ -17,8 +17,12 @@ import github from "../assets/icons/github.svg";
 import vercel from "../assets/icons/vercel.svg";
 import vscode from "../assets/icons/vscode.svg";
 import figma from "../assets/icons/figma.svg";
+import location from "../assets/icons/location.png"
+import hello from "../assets/icons/hello.svg"
+import briefcase from "../assets/icons/briefcase.png"
+import pfp from "../assets/images/pfp.png"
 
-export { reactLogo, jsLogo, directionArrow, logo, periodicTable, asterisk };
+export { reactLogo, jsLogo, directionArrow, logo, periodicTable, asterisk, location, hello, briefcase, pfp};
 
 export const techStack = [
   { iconName: "Html", icon: html },

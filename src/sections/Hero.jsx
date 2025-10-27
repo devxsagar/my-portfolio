@@ -39,7 +39,7 @@ const Hero = () => {
         </div>
       </div>
       {/* Footer */}
-      <HeroFooter  />
+      {/* <HeroFooter  /> */}
     </section>
   );
 };
