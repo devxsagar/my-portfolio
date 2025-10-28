@@ -3,6 +3,7 @@ import reactLogo from "../assets/icons/react_icon.png";
 import directionArrow from "../assets/icons/direction_arrow.png";
 import asterisk from "../assets/icons/asterisk.png";
 import periodicTable from "../assets/images/periodic-table.jpg";
+import dozo from "../assets/images/dozo.jpg";
 import logo from "../assets/images/logo.png";
 import html from "../assets/icons/html.svg";
 import css from "../assets/icons/css.svg";
@@ -29,6 +30,7 @@ export {
   directionArrow,
   logo,
   periodicTable,
+  dozo,
   asterisk,
   location,
   hello,

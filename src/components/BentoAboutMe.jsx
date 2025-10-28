@@ -1,19 +1,36 @@
+import { motion } from "motion/react";
 import { briefcase, hello, location, pfp } from "../data/images";
 
 const BentoAboutMe = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
       {/* Item 1 */}
-      <div className="bg-indigo-100 rounded-2xl px-6 py-10 flex items-center justify-center order-1 sm:col-span-2 lg:col-span-1">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-indigo-100 rounded-2xl px-6 py-10 flex items-center justify-center order-1 sm:col-span-2 lg:col-span-1"
+      >
         <h2 className="text-4xl sm:text-5xl font-suisse-medium tracking-wide leading-14 text-center sm:text-left">
           <span className="text-blue font-caveat text-5xl">Hello,</span> I'm{" "}
           <br /> Sagar{" "}
           <img src={hello} alt="waving-icon" className="w-16 sm:w-20 inline" />
         </h2>
-      </div>
+      </motion.div>
 
       {/* Item 2 */}
-      <div className="bg-blue-100 rounded-2xl p-6 order-2 sm:col-span-2 lg:col-span-2">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-blue-100 rounded-2xl p-6 order-2 sm:col-span-2 lg:col-span-2"
+      >
         <h3 className="font-suisse-mono text-[14px] font-extrabold text-base text-text-grey opacity-70">
           What I Do
         </h3>
@@ -33,19 +50,35 @@ const BentoAboutMe = () => {
           am eager to expand into backend technologies to become a full-stack
           developer ready to tackle any challenge.
         </p>
-      </div>
+      </motion.div>
 
       {/* Item 3 */}
-      <div className="bg-purple-100 rounded-2xl p-6 flex items-center justify-center order-3 sm:col-span-2 lg:col-span-1 lg:row-span-3">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-purple-100 rounded-2xl p-6 flex items-center justify-center order-3 sm:col-span-2 lg:col-span-1 lg:row-span-3"
+      >
         <img
           src={pfp}
           alt="profile-pic"
           className="rounded-xl max-w-[250px] sm:max-w-[300px] w-full h-auto"
         />
-      </div>
+      </motion.div>
 
       {/* Item 4 */}
-      <div className="bg-pink-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center order-4">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-pink-100 rounded-2xl p-6 flex flex-col items-center justify-center text-center order-4"
+      >
         <img
           src={briefcase}
           alt="location-icon"
@@ -56,23 +89,39 @@ const BentoAboutMe = () => {
           Open to exciting <span className="highlight">opportunities</span> and
           ready to <span className="highlight">relocate</span> if needed.
         </h3>
-      </div>
+      </motion.div>
 
       {/* Item 5 */}
-      <div className="bg-[#FFF7E0] rounded-2xl p-6 flex flex-col gap-2 items-center justify-center text-center order-5">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-[#FFF7E0] rounded-2xl p-6 flex flex-col gap-2 items-center justify-center text-center order-5"
+      >
         <img
           src={location}
           alt="location-icon"
-          className="w-24 -mt-6 sm:-mt-10"
+          className="w-28 sm:w-30 -mt-6 sm:-mt-10"
           loading="lazy"
         />
         <h3 className="text-xl sm:text-2xl font-suisse-regular -mt-4">
           Kolkata, IN
         </h3>
-      </div>
+      </motion.div>
 
       {/* Item 6 */}
-      <div className="bg-green-100 rounded-2xl p-6 order-6 sm:col-span-2 lg:col-span-2 lg:row-span-2">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.02,
+          transition: { duration: 0.5, ease: "linear" },
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="bg-green-100 rounded-2xl p-6 order-6 sm:col-span-2 lg:col-span-2 lg:row-span-2"
+      >
         <h3 className="font-suisse-mono text-[14px] font-extrabold text-base text-text-grey opacity-70">
           Education
         </h3>
@@ -98,7 +147,7 @@ const BentoAboutMe = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

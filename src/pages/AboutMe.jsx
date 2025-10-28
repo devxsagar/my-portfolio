@@ -1,8 +1,6 @@
+import SectionHeader from "../components/SectionHeader";
 import BentoAboutMe from "../components/BentoAboutMe";
 import BentoImage from "../components/BentoImage";
-import SectionHeader from "../components/SectionHeader";
-import Education from "../sections/Education";
-import { howItBegan } from "../utils/constants";
 
 const AboutMe = () => {
   return (
@@ -17,6 +15,12 @@ const AboutMe = () => {
           <BentoAboutMe />
         </section>
 
+        {/* Experience */}
+        {/* <section className="mt-20 md:mt-24 lg:mt-28">
+          <SectionHeader heading="Experience" />
+        </section> */}
+
+        {/* Life Beyond Code */}
         <section className="mt-20 md:mt-24 lg:mt-28">
           <div className="flex flex-col items-center justify-center">
             <SectionHeader
@@ -26,19 +30,6 @@ const AboutMe = () => {
           </div>
           <BentoImage />
         </section>
-
-        {/* Education */}
-        {/* <section className="mt-16 md:mt-20 lg:mt-24">
-          <div>
-            <SectionHeader
-              heading="Progress"
-              subHeading="The learning path that shaped me"
-            />
-          </div>
-          <article>
-            <Education />
-          </article>
-        </section> */}
       </div>
     </div>
   );

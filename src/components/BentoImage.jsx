@@ -1,11 +1,21 @@
+import { motion } from "motion/react";
 import { rectangle } from "../data/images";
-
 
 const BentoImage = () => {
   return (
-    <div className="">
+    <motion.div
+      initial={{ filter: "blur(5px)", y: 50, }}
+      whileInView={{
+        filter: "blur(0px)", y: 0, 
+        transition: { duration: 1, ease: "easeInOut" },
+      }}
+      viewport={{
+        once: true,
+        // amount: 0.1,
+      }}
+    >
       <img src={rectangle} alt="bento-images" />
-    </div>
+    </motion.div>
   );
 };
 
