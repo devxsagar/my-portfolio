@@ -49,12 +49,12 @@ const Footer = () => {
 
           {/* Middle */}
           <div className="py-2 flex flex-col items-center gap-y-15">
-            <div className="flex items-center justify-between w-full sm:w-md pl-7 pr-3 py-2 rounded-full bg-bg-black/90">
-              <p className="text-lg font-suisse-light tracking-widest">
+            <div className="flex items-center justify-evenly md:justify-between max-md:gap-4 w-fit sm:w-md pl-7 pr-3 py-2 rounded-full bg-bg-black/90">
+              <p className="text-sm md:text-lg font-suisse-light tracking-widest">
                 {email}
               </p>
               <button
-                className="text-center bg-blue w-35 h-15 rounded-full tracking-wider"
+                className="text-center max-md:text-sm bg-blue w-25 h-10   md:w-35 md:h-15 rounded-full tracking-wider"
                 onClick={handleEmailClickButton}
               >
                 {copied ? "Copied!" : "Copy Email"}
