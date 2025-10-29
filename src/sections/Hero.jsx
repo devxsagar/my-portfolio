@@ -6,8 +6,6 @@ import HeroHeading from "../components/HeroHeading";
 import HeroFooter from "../components/HeroFooter";
 
 const Hero = () => {
-  
-
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center">
       {/* Main Content */}
@@ -17,6 +15,17 @@ const Hero = () => {
           <motion.div
             className=" relative w-fit bg-bg-secondary border border-dashed border-border 
                 px-1 py-0.5 mb-8 mx-auto rounded-3xl md:mb-10 lg:px-2 lg:py-1 lg:mb-12 xl:mb-14 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]"
+            initial={{ y: 40, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 10,
+              mass: 2,
+            }}
           >
             <h2 className="text-xs md:text-sm xl:text-base text-text-secondary uppercase font-[590] font-suisse-regular">
               software engineer

@@ -1,10 +1,5 @@
 import jsLogo from "../assets/icons/javascript_icon.png";
 import reactLogo from "../assets/icons/react_icon.png";
-import directionArrow from "../assets/icons/direction_arrow.png";
-import asterisk from "../assets/icons/asterisk.png";
-import periodicTable from "../assets/images/periodic-table.jpg";
-import dozo from "../assets/images/dozo.jpg";
-import logo from "../assets/images/logo.png";
 import html from "../assets/icons/html.svg";
 import css from "../assets/icons/css.svg";
 import javascript from "../assets/icons/javascript.svg";
@@ -15,14 +10,26 @@ import shadcn from "../assets/icons/shadcn-ui.svg";
 import framerMotion from "../assets/icons/framer-motion.svg";
 import git from "../assets/icons/git.svg";
 import github from "../assets/icons/github.svg";
+import githubLight from "../assets/icons/github-light.svg";
 import vercel from "../assets/icons/vercel.svg";
 import vscode from "../assets/icons/vscode.svg";
 import figma from "../assets/icons/figma.svg";
+
+import directionArrow from "../assets/icons/direction_arrow.png";
+import asterisk from "../assets/icons/asterisk.png";
 import location from "../assets/icons/location.png";
 import hello from "../assets/icons/hello.svg";
 import briefcase from "../assets/icons/briefcase.png";
+import cursor from "../assets/icons/cursor.svg";
+import instagram from "../assets/icons/instagram.svg";
+import twitter from "../assets/icons/twitter.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+
+import logo from "../assets/images/logo.png";
 import pfp from "../assets/images/pfp.png";
-import rectangle from "../assets/images/rectangle.jpg";
+import dozo from "../assets/images/dozo.jpg";
+import periodicTable from "../assets/images/periodic-table.jpg";
+import bentoImages from "../assets/images/bento-images.jpg";
 
 export {
   reactLogo,
@@ -36,7 +43,12 @@ export {
   hello,
   briefcase,
   pfp,
-  rectangle
+  bentoImages,
+  cursor,
+  twitter,
+  instagram,
+  linkedin,
+  githubLight
 };
 
 export const techStack = [

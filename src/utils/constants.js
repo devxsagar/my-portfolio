@@ -1,3 +1,5 @@
+import { githubLight, instagram, linkedin, twitter } from "../data/images";
+
 export const email = "mitrasagar10@gmail.com";
 
 export const location = "Kolkata, India";
@@ -8,10 +10,10 @@ export const navLinks = [
 ];
 
 export const footerLinks = [
-  { link: "Linkedin", href: "https://www.linkedin.com/in/sagar-mitra19/" },
-  { link: "X(Twitter)", href: "" },
-  { link: "Instagram", href: "" },
-  { link: "GitHub", href: "" },
+  { linkName: "Linkedin", href: "https://www.linkedin.com/in/sagar-mitra19/", icon: linkedin },
+  { linkName: "X/Twitter", href: "", icon: twitter },
+  { linkName: "Instagram", href: "", icon: instagram },
+  { linkName: "GitHub", href: "", icon: githubLight },
 ];
 
 export const quickLinks = [

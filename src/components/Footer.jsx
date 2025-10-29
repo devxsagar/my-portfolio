@@ -1,80 +1,99 @@
 import { motion } from "motion/react";
-import { footerLinks, quickLinks } from "../utils/constants";
+import { email, footerLinks, quickLinks } from "../utils/constants";
 import FooterLink from "./FooterLink";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClickButton = () => {
+    if (email) {
+      navigator.clipboard.writeText(email);
+      setCopied(true);
+    }
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  };
+
   return (
-    <footer
-      className="relative  text-text-white pt-8 pb-5 lg:py-10  overflow-hidden "
-    >
-      {/* Background Pattern */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "#000000",
-          backgroundImage: `
+    <footer className="text-text-white">
+      <div className="relative pt-8 pb-5 lg:py-10">
+        {/* Background Pattern */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: "#000000",
+            backgroundImage: `
         radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.2) 1px, transparent 0),
         radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.18) 1px, transparent 0),
         radial-gradient(circle at 1px 1px, rgba(236, 72, 153, 0.15) 1px, transparent 0)
       `,
-          backgroundSize: "20px 20px, 30px 30px, 25px 25px",
-          backgroundPosition: "0 0, 10px 10px, 15px 5px",
-        }}
-      />
-
-      <div
-        className="flex flex-col justify-between
-        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[28rem] md:min-h-[38rem] lg:min-h-[40rem] mx-auto relative z-10"
-      >
-        {/* top */}
-        <div className="pt-1 md:pt-10 flex items-start justify-between  max-lg:flex-col max-lg:items-center max-lg:gap-15 relative z-10">
-          <div className="flex flex-col">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight">
-              <span className="text-text-grey">Let's</span> Connect!
-            </p>
-          </div>
-
-          <div className="flex gap-8 md:gap-12">
-            <div>
-              <p className="text-start text-[10px] md:text-xs text-text-grey mb-1.5 tracking-wider">
-                (Quick links)
-              </p>
-              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3 relative z-10">
-                {quickLinks.map((obj, index) => {
-                  return <FooterLink key={index} {...obj} />;
-                })}
-              </div>
-            </div>
-            <div>
-              <p className="text-start text-[10px] md:text-xs text-text-grey mb-1.5 tracking-wider">
-                (Social links)
-              </p>
-              <div className="flex flex-col gap-1.5 md:gap-2 lg:gap-3 relative z-10">
-                {footerLinks.map((obj, index) => {
-                  return <FooterLink key={index} {...obj} social="true" />;
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Middle Big Text */}
-        <motion.div
-          className="mx-auto text-[4rem] sm:text-[8rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] font-suisse-medium opacity-10"
-          initial={{ letterSpacing: "-0.1em" }}
-          whileInView={{
-            letterSpacing: "0.025em",
-            transition: { duration: 0.8, ease: "easeInOut" },
+            backgroundSize: "20px 20px, 30px 30px, 25px 25px",
+            backgroundPosition: "0 0, 10px 10px, 15px 5px",
           }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          devxsagar
-        </motion.div>
+        />
 
-        {/* Footer */}
-        <div className="flex items-center justify-between text-[8px]  sm:text-xs">
-          <p>Made with ☕ and ❤️ by Sagar Mitra</p>
-          <p>Last updated October 2025</p>
+        <div
+          className="flex flex-col justify-between
+        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[28rem] md:min-h-[38rem] lg:min-h-[40rem] mx-auto relative z-10"
+        >
+          {/* Top */}
+          <div className="pt-1 md:pt-10 flex items-start justify-between  max-lg:flex-col max-lg:items-center max-lg:gap-15 relative z-10">
+            <div className="flex flex-col">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide">
+                Let's connect?
+              </p>
+            </div>
+          </div>
+
+          {/* Middle */}
+          <div className="py-2 flex flex-col items-center gap-y-15">
+            <div className="flex items-center justify-between w-full sm:w-md pl-7 pr-3 py-2 rounded-full bg-bg-black/90">
+              <p className="text-lg font-suisse-light tracking-widest">
+                {email}
+              </p>
+              <button
+                className="text-center bg-blue w-35 h-15 rounded-full tracking-wider"
+                onClick={handleEmailClickButton}
+              >
+                {copied ? "Copied!" : "Copy Email"}
+              </button>
+            </div>
+
+            <div className="flex items-center gap-15 overflow-y-hidden px-5">
+              {footerLinks.map((link, index) => {
+                return (
+                  <Link key={index} className="relative py-5">
+                    <motion.div initial="initial" whileHover="hovered">
+                      <motion.p
+                        variants={{
+                          initial: { y: -30, filter: "blur(6px)" },
+                          hovered: { y: 0, filter: "blur(0px)" },
+                        }}
+                        className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-suisse-book"
+                      >
+                        {link.linkName}
+                      </motion.p>
+                      <img
+                        src={link.icon}
+                        alt={link.linkName}
+                        className="w-8 opacity-60 "
+                      />
+                    </motion.div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="flex items-center justify-between text-[8px]  sm:text-xs">
+            <p>Made with ☕ and 🎧 by Sagar Mitra</p>
+            <p>Last updated October 2025</p>
+          </div>
         </div>
       </div>
     </footer>
