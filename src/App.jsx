@@ -7,8 +7,8 @@ import { clarity } from "react-microsoft-clarity";
 
 const App = () => {
   useEffect(() => {
-    if(process.env.NODE_ENV === "production") {
-      clarity.init("")
+    if (process.env.NODE_ENV === "production") {
+      clarity.init("txso389rbt");
     }
   }, []);
 
