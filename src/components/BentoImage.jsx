@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { rectangle } from "../data/images";
+import { bentoImages } from "../data/images";
 
 const BentoImage = () => {
   return (
@@ -14,7 +14,7 @@ const BentoImage = () => {
         // amount: 0.1,
       }}
     >
-      <img src={rectangle} alt="bento-images" />
+      <img src={bentoImages} alt="bento-images" />
     </motion.div>
   );
 };
