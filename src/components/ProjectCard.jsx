@@ -13,6 +13,7 @@ const ProjectCard = ({
   image,
   bgColor,
   textColor,
+  linkTextColor,
   githubLink,
   liveLink,
   range,
@@ -59,7 +60,7 @@ const ProjectCard = ({
                 </h3>
 
                 {/* Description for Larger Screen  */}
-                <ul className="text-xs md:text-sm lg:text-base font-suisse-regular text-text-white/80 leading-relaxed list-disc pl-4 space-y-1 max-lg:hidden">
+                <ul className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed list-disc pl-4 space-y-1 max-lg:hidden" style={{color: textColor}}>
                   {description.map((desc, index) => {
                     return <li key={index}>{desc}</li>;
                   })}
@@ -92,7 +93,7 @@ const ProjectCard = ({
         {/* Tech Stack and Links */}
         <div className="flex max-lg:flex-col lg:items-center justify-between gap-6 md:gap-6 lg:gap-9">
           {/* Tech Stack */}
-          <ul className="lg:w-[55%] text-text-white/80 flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none ">
+          <ul className="lg:w-[55%] flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none " style={{color: textColor}}>
             {techStack.map((tool, index) => {
               return (
                 <li
@@ -110,11 +111,13 @@ const ProjectCard = ({
             <ProjectLinkButton
               buttonName="GitHub"
               link={githubLink}
+              linkTextColor={linkTextColor}
               textColor={textColor}
             />
             <ProjectLinkButton
               buttonName="Live"
               link={liveLink}
+              linkTextColor={linkTextColor}
               textColor={textColor}
             />
           </div>
