@@ -17,7 +17,12 @@ const BentoAboutMe = () => {
         <h2 className="text-4xl sm:text-5xl font-suisse-medium tracking-wide leading-14 text-center sm:text-left">
           <span className="text-blue font-caveat text-5xl">Hello,</span> I'm{" "}
           <br /> Sagar{" "}
-          <img src={hello} alt="waving-icon" className="w-16 sm:w-20 inline" />
+          <img
+            src={hello}
+            alt="waving-icon"
+            loading="lazy"
+            className="w-16 sm:w-20 inline"
+          />
         </h2>
       </motion.div>
 
@@ -65,6 +70,7 @@ const BentoAboutMe = () => {
         <img
           src={pfp}
           alt="profile-pic"
+          loading="lazy"
           className="rounded-xl max-w-[250px] sm:max-w-[300px] w-full h-auto"
         />
       </motion.div>

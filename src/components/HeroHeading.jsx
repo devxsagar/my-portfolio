@@ -36,7 +36,8 @@ const HeroHeading = () => {
         <span>
           <motion.img
             src={pfp}
-            alt="profile pic"
+            alt="profile-pic"
+            loading="lazy"
             className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] object-cover object-top border border-border rounded-lg md:rounded-xl lg:rounded-2xl inline"
             whileHover={{
               rotate: -12,
@@ -67,7 +68,8 @@ const HeroHeading = () => {
         <span>
           <motion.img
             src={reactLogo}
-            alt="react logo"
+            alt="react-logo"
+            loading="lazy"
             className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
             whileHover={{
               // scale: 1.5,
@@ -85,7 +87,8 @@ const HeroHeading = () => {
         <span>
           <motion.img
             src={jsLogo}
-            alt="javascript logo"
+            alt="javascript-logo"
+            loading="lazy"
             className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
             whileHover={{
               // scale: 1.5,

@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { techStack } from "../data/images";
 
-
 const Marquee = () => {
   return (
     <motion.div
@@ -24,7 +23,8 @@ const Marquee = () => {
           >
             <img
               src={tech.icon}
-              alt={`${tech.iconName} logo`}
+              alt={`${tech.iconName}-logo`}
+              loading="lazy"
               className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
             />
             <motion.p

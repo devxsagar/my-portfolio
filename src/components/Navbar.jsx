@@ -43,7 +43,12 @@ const Navbar = () => {
         to="/"
         className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl"
       >
-        <img src={logo} alt="logo" className="w-5 md:w-7 lg:w-8" />
+        <img
+          src={logo}
+          alt="logo"
+          loading="lazy"
+          className="w-5 md:w-7 lg:w-8"
+        />
       </Link>
 
       {/* Nav Links for Desktop */}
@@ -52,7 +57,7 @@ const Navbar = () => {
           return <NavLink key={index} link={link} />;
         })}
       </div>
-        
+
       {/* Nav Links for Mobile & Tablet */}
       <div
         className="lg:hidden relative"

@@ -8,7 +8,7 @@ const FooterLink = ({ href, icon, linkName }) => {
         <motion.p
           variants={{
             initial: { y: -30, filter: "blur(6px)" },
-            hovered: { y: 20, filter: "blur(0px)", },
+            hovered: { y: 20, filter: "blur(0px)" },
           }}
           className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-suisse-book group-hover:opacity-100"
         >
@@ -21,6 +21,7 @@ const FooterLink = ({ href, icon, linkName }) => {
           }}
           src={icon}
           alt={linkName}
+          loading="lazy"
           className="w-8 opacity-60 "
         />
       </motion.div>

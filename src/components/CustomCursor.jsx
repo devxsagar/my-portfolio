@@ -32,7 +32,7 @@ export default function CustomCursor() {
   return (
     <motion.img
       src={cursorImg}
-      alt="custom cursor"
+      alt="custom-cursor"
       className="fixed w-7 h-7 pointer-events-none z-[9999]"
       style={{
         translateX: smoothX,
