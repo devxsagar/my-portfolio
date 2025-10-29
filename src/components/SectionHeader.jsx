@@ -1,7 +1,7 @@
 import { Sparkle } from "lucide-react";
 import RevealTextEffect from "./RevealTextEffect";
 
-const SectionHeaderTrail = ({heading, subheading}) => {
+const SectionHeader = ({heading, subheading}) => {
   return (
     <header className={`mb-12 md:mb-14 lg:mb-16 flex ${subheading && "flex-col"} items-center justify-center`}>
       <div className="flex items-center gap-2">
@@ -17,4 +17,4 @@ const SectionHeaderTrail = ({heading, subheading}) => {
   );
 };
 
-export default SectionHeaderTrail;
+export default SectionHeader;

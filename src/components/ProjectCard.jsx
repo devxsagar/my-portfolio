@@ -12,8 +12,7 @@ const ProjectCard = ({
   techStack,
   image,
   bgColor,
-  borderColor,
-  techBG,
+  textColor,
   githubLink,
   liveLink,
   range,
@@ -99,7 +98,6 @@ const ProjectCard = ({
                 <li
                   key={index}
                   className="text-[8px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 sm:py-1.5 border border-text-white/70 rounded-md lg:rounded-lg"
-                  // style={{ backgroundColor: techBG }}
                 >
                   {tool}
                 </li>
@@ -112,12 +110,12 @@ const ProjectCard = ({
             <ProjectLinkButton
               buttonName="GitHub"
               link={githubLink}
-              // color={color}
+              textColor={textColor}
             />
             <ProjectLinkButton
               buttonName="Live"
               link={liveLink}
-              // color={color}
+              textColor={textColor}
             />
           </div>
         </div>

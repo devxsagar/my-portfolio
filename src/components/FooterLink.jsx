@@ -1,18 +1,21 @@
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import Zoop from "./Zoop";
 
-const FooterLink = ({href, link, social}) => {
+const FooterLink = ({ href, icon, linkName }) => {
   return (
-    <Link
-      to={href}
-      onClick={() => !social && window.scrollTo({top: 0, behavior: "smooth"})}
-      className="text-sm md:text-base lg:text-lg font-suisse-light tracking-widest hover:text-text-grey h-fit hover-transition"
-    >
-      <div className={`flex items-center justify-between ${social ? "w-26  md:w-32 lg:w-36" : "w-20 md:w-25 lg:w-30" }  h-fit`}>
-        <Zoop text={link} />
-        <ArrowUpRight className="w-4 md:w-5 lg:w-6" />
-      </div>
+    <Link to={href} className="relative py-5">
+      <motion.div initial="initial" whileHover="hovered">
+        <motion.p
+          variants={{
+            initial: { y: -30, filter: "blur(6px)" },
+            hovered: { y: 0, filter: "blur(0px)" },
+          }}
+          className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-suisse-book"
+        >
+          {linkName}
+        </motion.p>
+        <img src={icon} alt={linkName} className="w-8 opacity-60 " />
+      </motion.div>
     </Link>
   );
 };

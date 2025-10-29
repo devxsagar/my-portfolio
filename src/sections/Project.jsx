@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import { useScroll } from "motion/react";
 import ProjectCard from "../components/ProjectCard";
-import SectionHeader from "../components/SectionHeader2";
 import projectInfo from "../data/projectsInfo";
-import SectionHeaderTrail from "../components/SectionHeader";
+import SectionHeader from "../components/SectionHeader";
 
 const Project = () => {
   const containerRef = useRef();
@@ -18,7 +17,7 @@ const Project = () => {
         subHeading="Recent work showcase"
       /> */}
 
-      <SectionHeaderTrail heading="Selected Projects"/>
+      <SectionHeader heading="Selected Projects"/>
 
       {/* Project Cards */}
       <div ref={containerRef} className="px-3 lg:px-0 flex flex-col gap-8 md:gap-10 ">

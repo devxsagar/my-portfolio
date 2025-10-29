@@ -1,8 +1,6 @@
-import { motion } from "motion/react";
-import { email, footerLinks, quickLinks } from "../utils/constants";
-import FooterLink from "./FooterLink";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { email, footerLinks } from "../utils/constants";
+import FooterLink from "./FooterLink";
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -65,26 +63,7 @@ const Footer = () => {
 
             <div className="flex items-center gap-15 overflow-y-hidden px-5">
               {footerLinks.map((link, index) => {
-                return (
-                  <Link key={index} className="relative py-5">
-                    <motion.div initial="initial" whileHover="hovered">
-                      <motion.p
-                        variants={{
-                          initial: { y: -30, filter: "blur(6px)" },
-                          hovered: { y: 0, filter: "blur(0px)" },
-                        }}
-                        className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-suisse-book"
-                      >
-                        {link.linkName}
-                      </motion.p>
-                      <img
-                        src={link.icon}
-                        alt={link.linkName}
-                        className="w-8 opacity-60 "
-                      />
-                    </motion.div>
-                  </Link>
-                );
+                return <FooterLink key={index} {...link} />
               })}
             </div>
           </div>
@@ -103,21 +82,6 @@ const Footer = () => {
 export default Footer;
 
 /** 
-<motion.div
-        className="absolute left-1/2 -translate-x-1/2 
-        -bottom-11 sm:-bottom-23 md:-bottom-25.5 lg:-bottom-34 xl:-bottom-10   
-        text-[4rem] sm:text-[8rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] font-suisse-medium tracking-wide opacity-10 "
-        initial={{ y: "20%", scale: 0.8, filter: "blur(10px)" }}
-        whileInView={{
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          transition: { duration: 0.8, ease: "easeInOut" },
-        }}
-></motion.div>
- */
-
-/**
 
 <div className="flex items-center justify-center max-md:mt-5">
     <div className="flex items-center gap-2 relative z-10">

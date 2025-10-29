@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { Copy, MapPin } from "lucide-react";
 import Zoop from "./Zoop";
 import { email, location } from "../utils/constants";
-import { useState } from "react";
 
 const HeroFooter = () => {
   const [emailHovered, setEmailHovered] = useState(false);
