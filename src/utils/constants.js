@@ -11,9 +11,9 @@ export const navLinks = [
 
 export const footerLinks = [
   { linkName: "Linkedin", href: "https://www.linkedin.com/in/sagar-mitra19/", icon: linkedin },
-  { linkName: "X/Twitter", href: "", icon: twitter },
-  { linkName: "Instagram", href: "", icon: instagram },
-  { linkName: "GitHub", href: "", icon: githubLight },
+  { linkName: "X/Twitter", href: "https://x.com/devxsagar", icon: twitter },
+  { linkName: "Instagram", href: "https://www.instagram.com/devxsagar/", icon: instagram },
+  { linkName: "GitHub", href: "https://github.com/devxsagar", icon: githubLight },
 ];
 
 export const quickLinks = [
