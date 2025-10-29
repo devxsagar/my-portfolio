@@ -4,9 +4,12 @@ import { navLinks } from "../utils/constants";
 import NavLink from "./NavLink";
 import { logo } from "../data/images";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import MobileNavLink from "./MobileNavLink";
 
 const Navbar = () => {
   const [hideNav, setHideNav] = useState(false);
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   const { scrollY } = useScroll();
 
@@ -22,7 +25,6 @@ const Navbar = () => {
     }
   });
 
-
   return (
     <motion.nav
       variants={{ visible: { y: 0 }, hidden: { y: "-150%" } }}
@@ -37,15 +39,49 @@ const Navbar = () => {
       "
     >
       {/* Logo  */}
-      <Link to="/" className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl">
+      <Link
+        to="/"
+        className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl"
+      >
         <img src={logo} alt="logo" className="w-5 md:w-7 lg:w-8" />
       </Link>
 
-      {/* Nav links */}
+      {/* Nav Links for Desktop */}
       <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-suisse-medium">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
+      </div>
+        
+      {/* Nav Links for Mobile & Tablet */}
+      <div
+        className="lg:hidden relative"
+        onClick={() => setIsMenuClicked((prev) => !prev)}
+      >
+        {isMenuClicked ? (
+          <motion.span
+            className="inline-block"
+            initial={{ rotate: 0 }}
+            whileTap={{
+              rotate: -180,
+              transition: { duration: 0.1, ease: "linear" },
+            }}
+          >
+            <X className="md:w-12 md:h-8" />
+          </motion.span>
+        ) : (
+          <motion.span
+            className="inline-block"
+            initial={{ rotate: 0 }}
+            whileTap={{
+              rotate: 180,
+              transition: { duration: 0.1, ease: "linear" },
+            }}
+          >
+            <Menu className="md:w-12 md:h-8" />
+          </motion.span>
+        )}
+        {isMenuClicked && <MobileNavLink />}
       </div>
     </motion.nav>
   );

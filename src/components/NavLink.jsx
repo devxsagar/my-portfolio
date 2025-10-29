@@ -12,7 +12,7 @@ const NavLink = ({ link }) => {
       className="relative group text-text-primary"
     >
       <Link to={link.href}>
-        <div className="px-3 lg:px-5 lg:w-30 lg:h-12 flex items-center overflow-hidden">
+        <div className="px-5 w-30 h-12 flex items-center overflow-hidden">
           {/* Background */}
           <motion.div
             className={`
@@ -30,11 +30,11 @@ const NavLink = ({ link }) => {
           {/* Arrow & Link Name  */}
           <motion.div
             variants={{
-              initial: isDesktop && { color: "#000000" },
-              hovered: isDesktop && { color: "#fafafa" },
+              initial: { color: "#000000" },
+              hovered: { color: "#fafafa" },
             }}
             transition={{ duration: 0.3, ease: "linear" }}
-            className="z-20 relative"
+            className="z-20 relative max-lg:hidden"
           >
             <motion.div
               className="absolute top-1/2 -translate-y-1/2 -left-5  max-lg:hidden"
@@ -53,8 +53,8 @@ const NavLink = ({ link }) => {
 
             <motion.p
               variants={{
-                initial: isDesktop && { x: 0 },
-                hovered: isDesktop && { x: 15 },
+                initial: { x: 0 },
+                hovered: { x: 15 },
               }}
               transition={{ duration: 0.3, ease: "linear" }}
             >
