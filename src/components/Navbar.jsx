@@ -63,7 +63,7 @@ const Navbar = () => {
             className="inline-block"
             initial={{ rotate: 0 }}
             whileTap={{
-              rotate: -180,
+              rotate: 180,
               transition: { duration: 0.1, ease: "linear" },
             }}
           >
@@ -74,7 +74,7 @@ const Navbar = () => {
             className="inline-block"
             initial={{ rotate: 0 }}
             whileTap={{
-              rotate: 180,
+              rotate: -180,
               transition: { duration: 0.1, ease: "linear" },
             }}
           >
