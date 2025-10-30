@@ -60,21 +60,27 @@ const ProjectCard = ({
                 </h3>
 
                 {/* Description for Larger Screen  */}
-                <ul className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed list-disc pl-4 space-y-1 max-lg:hidden" style={{color: textColor}}>
+                <ul
+                  className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed list-disc pl-4 space-y-1 max-lg:hidden"
+                  style={{ color: textColor }}
+                >
                   {description.map((desc, index) => {
                     return <li key={index}>{desc}</li>;
                   })}
                 </ul>
 
                 {/* Description For Mobile Screen */}
-                <p className="text-xs md:text-sm lg:text-base font-suisse-regular text-text-white/80 leading-relaxed lg:hidden">
+                <p
+                  className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed lg:hidden"
+                  style={{ color: textColor }}
+                >
                   {mobileDesc}
                 </p>
               </div>
             </div>
           </div>
 
-          {/* right side */}
+          {/* Image Section */}
           <div className="overflow-hidden flex items-center">
             <motion.div
               className="w-full lg:max-w-[550px]"
@@ -93,7 +99,10 @@ const ProjectCard = ({
         {/* Tech Stack and Links */}
         <div className="flex max-lg:flex-col lg:items-center justify-between gap-6 md:gap-6 lg:gap-9">
           {/* Tech Stack */}
-          <ul className="lg:w-[55%] flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none " style={{color: textColor}}>
+          <ul
+            className="lg:w-[55%] flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none "
+            style={{ color: textColor }}
+          >
             {techStack.map((tool, index) => {
               return (
                 <li
