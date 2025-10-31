@@ -4,10 +4,10 @@ import { navLinks } from "../utils/constants";
 
 const MobileNavLink = () => {
   return (
-    <div className="absolute top-13 -right-8 t-0 w-screen md:w-screen h-[80vh] bg-bg-primary rounded-lg flex flex-col items-center gap-y-5 md:gap-y-10 px-10 py-20 text-2xl md:text-4xl tracking-wide ">
+    <div className="absolute top-12 -right-8 t-0 w-screen md:w-screen h-[80vh] bg-bg-primary rounded-lg flex flex-col items-center gap-y-5 md:gap-y-10 px-10 py-20 text-2xl md:text-4xl tracking-wide ">
       {navLinks.map((link, index) => {
         return (
-          <Link key={index}>
+          <Link key={index} to={link.href} >
             <motion.span
               initial={{ y: -20, opacity: 0 }}
               animate={{
