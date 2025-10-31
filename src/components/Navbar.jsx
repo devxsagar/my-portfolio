@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Nav Links for Mobile & Tablet */}
       <div
-        className="lg:hidden relative"
+        className="lg:hidden relative border border-red-500"
         onClick={() => setIsMenuClicked((prev) => !prev)}
       >
         {isMenuClicked ? (
