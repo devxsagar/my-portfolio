@@ -52,7 +52,7 @@ const Navbar = () => {
       </Link>
 
       {/* Nav Links for Desktop */}
-      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-suisse-medium">
+      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-suisse-medium max-lg:hidden">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Nav Links for Mobile & Tablet */}
       <div
-        className="lg:hidden relative border border-red-500"
+        className="lg:hidden relative"
         onClick={() => setIsMenuClicked((prev) => !prev)}
       >
         {isMenuClicked ? (
