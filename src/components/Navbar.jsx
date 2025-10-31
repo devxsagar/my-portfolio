@@ -63,29 +63,17 @@ const Navbar = () => {
         className="lg:hidden relative"
         onClick={() => setIsMenuClicked((prev) => !prev)}
       >
-        {isMenuClicked ? (
-          <motion.span
-            className="inline-block"
-            initial={{ rotate: 0 }}
-            whileTap={{
-              rotate: 180,
-              transition: { duration: 0.1, ease: "linear" },
-            }}
-          >
-            <X className="md:w-12 md:h-8" />
-          </motion.span>
-        ) : (
-          <motion.span
-            className="inline-block"
-            initial={{ rotate: 0 }}
-            whileTap={{
-              rotate: -180,
-              transition: { duration: 0.1, ease: "linear" },
-            }}
-          >
-            <Menu className="md:w-12 md:h-8" />
-          </motion.span>
-        )}
+        <motion.span
+          className="inline-block"
+          initial={{ rotate: 0 }}
+          whileTap={{
+            rotate: -180,
+            transition: { duration: 0.1, ease: "linear" },
+          }}
+        >
+          <Menu className="md:w-12 md:h-8" />
+        </motion.span>
+
         {isMenuClicked && <MobileNavLink />}
       </div>
     </motion.nav>

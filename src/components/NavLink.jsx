@@ -12,7 +12,11 @@ const NavLink = ({ link }) => {
       className="relative group text-text-primary"
     >
       <Link to={link.href}>
-        <div className="px-5 w-30 h-12 flex items-center overflow-hidden">
+        <div
+          className={`px-5 ${
+            link.name === "Blog" ? "w-25" : "w-30"
+          } h-12 flex items-center overflow-hidden`}
+        >
           {/* Background */}
           <motion.div
             className={`

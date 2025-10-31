@@ -43,6 +43,7 @@ const Footer = () => {
           }}
         />
 
+
         <motion.div
           className="absolute inset-0 z-50"
           style={{
@@ -56,7 +57,7 @@ const Footer = () => {
 
         <div
           className="flex flex-col justify-between
-        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[28rem] md:min-h-[38rem] lg:min-h-[25rem] mx-auto relative z-10"
+        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[20rem] md:min-h-[25rem] mx-auto relative z-10"
         >
           {/* Top */}
           {/* <div className="pt-1 md:pt-10 flex items-center justify-center  max-lg:flex-col max-lg:items-center max-lg:gap-15 relative z-10">
