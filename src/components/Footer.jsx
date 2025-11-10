@@ -43,34 +43,21 @@ const Footer = () => {
           }}
         />
 
-
-        <motion.div
-          className="absolute inset-0 z-50"
-          style={{
-            background: "#fafafa",
-          }}
-          initial={{ height: "100%" }}
-          whileInView={{ height: 0 }}
-          transition={{ duration: 1, ease: "linear" }}
-          viewport={{ once: true, amount: 0.3 }}
-        />
+        <div className="absolute inset-0 z-50" />
 
         <div
           className="flex flex-col justify-between
-        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[20rem] md:min-h-[25rem] mx-auto relative z-10"
+        w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[20rem] md:min-h-[25rem] mx-auto relative z-50"
         >
           {/* Top */}
-          {/* <div className="pt-1 md:pt-10 flex items-center justify-center  max-lg:flex-col max-lg:items-center max-lg:gap-15 relative z-10">
-            <div>
-              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-suisse-book tracking-wide uppercase">
-                let's connect
-              </p>
-            </div>
-          </div> */}
-
-          {/* Top */}
           <div className="pt-1 md:pt-10 flex flex-col justify-center items-center gap-y-15">
-            <div className="flex items-center justify-evenly md:justify-between max-md:gap-4 w-fit sm:w-md pl-7 pr-3 py-2 rounded-full bg-bg-black/90">
+            <motion.div
+              className="flex items-center justify-evenly md:justify-between max-md:gap-4 w-fit sm:w-md pl-7 pr-3 py-2 rounded-full bg-bg-black/90"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <p className="text-sm md:text-lg font-suisse-book opacity-60 tracking-widest">
                 {email}
               </p>
@@ -80,19 +67,22 @@ const Footer = () => {
               >
                 {copied ? "Copied 🎉" : "Copy Email"}
               </button>
-            </div>
+            </motion.div>
 
-            <div className="flex items-center gap-15 overflow-y-hidden px-5">
+            <motion.div
+              className="flex items-center gap-15 overflow-y-hidden px-5"
+             
+            >
               {footerLinks.map((link, index) => {
                 return <FooterLink key={index} {...link} />;
               })}
-            </div>
+            </motion.div>
           </div>
 
           {/* Footer */}
           <div className="flex items-center justify-between text-[8px]  sm:text-xs">
             <p>Made with ☕ and 🎧 by Sagar Mitra</p>
-            <p>Last updated October 2025</p>
+            <p>Last updated November 2025</p>
           </div>
         </div>
       </div>
@@ -101,23 +91,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-/** 
-
-<div className="flex items-center justify-center max-md:mt-5">
-    <div className="flex items-center gap-2 relative z-10">
-        <div className="bg-emerald-500 w-2.5 h-2.5 rounded-full animate-pulse" />
-        <p className="text-base">Open to work and opportunities</p>
-    </div>
-</div>
-
- */
-
-// <div className="flex items-center justify-center">
-//   <motion.span className="text-[12rem] font-suisse-bold text-text-grey"
-//   initial={{ letterSpacing: "-0.07em" }}
-//   whileInView={{letterSpacing: "0.1em", transition: {duration: 0.8, ease: "easeInOut"}}}
-//   >
-//     devxsagar
-//   </motion.span>
-// </div>
