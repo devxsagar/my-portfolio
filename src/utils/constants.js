@@ -6,7 +6,7 @@ export const location = "Kolkata, India";
 
 export const navLinks = [
   { name: "Projects", href: "/projects" },
-  { name: "Resume", href: "/" },
+  { name: "Resume", href: "https://drive.google.com/file/d/1FOWGFTTwBtWfkpKKAFS7erE-XE89hd3k/view" },
   { name: "Blog", href: "https://devxsagar.hashnode.dev/" },
   ];
 
