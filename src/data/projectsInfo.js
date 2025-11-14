@@ -30,8 +30,8 @@ const projectInfo = [
     textColor: "#ffffff",
     linkTextColor: "#6b21a8",
     image: movieMatrix,
-    githubLink: "https://github.com/devxsagar/Dozo",
-    liveLink: "https://dozo-dxs.vercel.app/",
+    githubLink: "https://github.com/devxsagar/Movie-Matrix",
+    liveLink: "https://movie-matrix-dxs.vercel.app/",
   },
   {
     projectName: "dozo",

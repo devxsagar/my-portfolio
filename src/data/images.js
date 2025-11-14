@@ -31,6 +31,7 @@ import dozo from "../assets/images/dozo.jpg";
 import periodicTable from "../assets/images/periodic-table.jpg";
 import bentoImages from "../assets/images/bento-images.jpg";
 import movieMatrix from "../assets/images/movie-matrix.png";
+import blogOne from "../assets/images/blog-one.jpeg";
 
 export {
   reactLogo,
@@ -50,7 +51,8 @@ export {
   twitter,
   instagram,
   linkedin,
-  githubLight
+  githubLight,
+  blogOne,
 };
 
 export const techStack = [
