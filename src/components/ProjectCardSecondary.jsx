@@ -3,6 +3,7 @@ import ProjectLinkButton from "./ProjectLinkButton";
 import { motion } from "motion/react";
 
 const ProjectCardSecondary = ({
+  index,
   projectName,
   title,
   description,
@@ -20,10 +21,11 @@ const ProjectCardSecondary = ({
     <motion.div
       className="p-4 sm:p-6 md:p-8 md:min-h-[350px] lg:min-h-[542px] max-w-md md:max-w-xl lg:w-full lg:max-w-full mx-auto flex flex-col justify-between rounded-xl max-lg:gap-5 gap-6
         shadow-[0_3px_10px_rgb(0,0,0,0.2)] relative"
-        initial={{ scale: 0.8, y: 30 }}
-        whileInView={{ scale: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ once: true }}   
+      initial={{ scale: 0.8, y: 30 }}
+      animate={index === 0 && { scale: 1, y: 0 }}
+      whileInView={index !== 0 && { scale: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
       style={{
         backgroundColor: bgColor,
         border: `4px solid #fafafa`,

@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useMediaQuery } from "react-responsive";
 
 const NavLink = ({ link }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
   return (
     <motion.div
       initial="initial"
       whileHover="hovered"
       className="relative group text-text-primary"
     >
-      <Link to={link.href}>
+      <Link to={link.href}  >
         <div
           className={`px-5 ${
             link.name === "Blog" ? "w-25" : "w-30"

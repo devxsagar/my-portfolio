@@ -30,6 +30,7 @@ import pfp from "../assets/images/pfp.png";
 import dozo from "../assets/images/dozo.jpg";
 import periodicTable from "../assets/images/periodic-table.jpg";
 import bentoImages from "../assets/images/bento-images.jpg";
+import movieMatrix from "../assets/images/movie-matrix.png";
 
 export {
   reactLogo,
@@ -37,6 +38,7 @@ export {
   directionArrow,
   logo,
   periodicTable,
+  movieMatrix,
   dozo,
   asterisk,
   location,

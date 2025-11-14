@@ -12,11 +12,6 @@ const Project = () => {
   })
   return (
     <section className="w-full min-h-screen pt-16 md:pt-20 lg:pt-28">
-      {/* <SectionHeader
-        heading="projects"
-        subHeading="Recent work showcase"
-      /> */}
-
       <SectionHeader heading="Selected Projects"/>
 
       {/* Project Cards */}

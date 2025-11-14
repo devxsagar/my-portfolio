@@ -10,7 +10,7 @@ const Projects = () => {
       <SectionHeader heading="Projects" />
       <div className="px-3 lg:px-0 flex flex-col gap-8 md:gap-10 ">
         {projectInfo.map((project, index) => {
-          return <ProjectCardSecondary key={index} {...project} />;
+          return <ProjectCardSecondary index={index} key={index} {...project} />;
         })}
       </div>
     </div>

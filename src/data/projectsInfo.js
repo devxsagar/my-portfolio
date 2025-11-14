@@ -1,6 +1,38 @@
-import { dozo, periodicTable } from "./images";
+import { dozo, movieMatrix, periodicTable } from "./images";
 
 const projectInfo = [
+  {
+    projectName: "movie matrix",
+    title: "Movie Discovery Platform",
+    description: [
+      "Built a movie discovery platform with 20+ reusable components and 8+ custom hooks.",
+      "Optimized search with 500ms debouncing, reducing API calls by ~60%.",
+      "Implemented watchlist using Redux Toolkit with localStorage persistence.",
+      "Integrated 10+ TMDB REST API endpoints with efficient data fetching and caching.",
+      "Added auto-rotating hero carousel with touch and drag support.",
+      "Improved performance using lazy loading and skeleton UI states.",
+    ],
+    mobileDesc:
+      "A fast and responsive movie discovery app built with 20+ reusable components, featuring optimized 500ms debounced search, a Redux-powered watchlist with localStorage support, seamless TMDB API integration, an interactive auto-rotating hero carousel, and performance boosts like lazy-loaded images and skeleton screens for a smooth user experience.",
+    date: "nov 2025",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Redux",
+      "TMDB API",
+      "Tailwind CSS",
+      "Framer Motion",
+      "ShadCn/ui",
+    ],
+    bgColor: "#a855f7",
+    borderColor: "#fafafa",
+    techBG: "#c4b5fd",
+    textColor: "#ffffff",
+    linkTextColor: "#6b21a8",
+    image: movieMatrix,
+    githubLink: "https://github.com/devxsagar/Dozo",
+    liveLink: "https://dozo-dxs.vercel.app/",
+  },
   {
     projectName: "dozo",
     title: "Kanban Task Management System",
@@ -17,17 +49,16 @@ const projectInfo = [
     date: "sep 2025",
     techStack: [
       "React",
-      "JavaScript",
       "Redux",
+      "JavaScript",
       "dnd-kit/core",
       "Tailwind CSS",
-      "Framer Motion",
       "ShadCn/ui",
     ],
     bgColor: "#8b5cf6",
     borderColor: "#fafafa",
     techBG: "#c4b5fd",
-    textColor: "#faf5ff",
+    textColor: "#ffffff",
     linkTextColor: "#6b21a8",
     image: dozo,
     githubLink: "https://github.com/devxsagar/Dozo",
@@ -51,7 +82,7 @@ const projectInfo = [
     bgColor: "#6366f1",
     borderColor: "#fafafa",
     techBG: "#dbeafe",
-    textColor: "#eff6ff",
+    textColor: "#ffffff",
     linkTextColor: "#3730a3",
     image: periodicTable,
     githubLink: "https://github.com/devxsagar/Periodic-Table#",
@@ -60,3 +91,9 @@ const projectInfo = [
 ];
 
 export default projectInfo;
+
+/**
+ *  500 - bg
+ *  800 - link-text-color
+ *  50 - text
+ */

@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import ReactLenis from "lenis/react";
 import { useEffect } from "react";
 import { clarity } from "react-microsoft-clarity";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const App = () => {
       }}
     >
       <div className="relative min-h-screen max-w-screen bg-bg-primary  font-suisse-regular">
+        <ScrollToTop />
         <Navbar />
         <main>
           <Outlet />

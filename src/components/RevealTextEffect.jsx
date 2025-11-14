@@ -9,7 +9,13 @@ const RevealTextEffect = ({ text }) => {
         key={i}
         className="inline-block"
         initial={{ opacity: 0, y: 20 ,filter: "blur(10px)" }}
-        whileInView={{
+        animate={text === "Projects" && {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          transition: { duration: 1, delay: i * LETTER_DELAY, ease:"backInOut" },
+        }}
+        whileInView={text !== "Projects" && {
           opacity: 1,
           y: 0,
           filter: "blur(0px)",
