@@ -3,6 +3,7 @@ import reactLogo from "../assets/icons/react_icon.png";
 import html from "../assets/icons/html.svg";
 import css from "../assets/icons/css.svg";
 import javascript from "../assets/icons/javascript.svg";
+import typescript from "../assets/icons/typescript.svg";
 import reactIcon from "../assets/icons/react.svg";
 import redux from "../assets/icons/redux.svg";
 import tailwind from "../assets/icons/tailwind.svg";
@@ -29,7 +30,7 @@ import logo from "../assets/images/navLogo.png";
 import pfp from "../assets/images/pfp.png";
 import dozo from "../assets/images/dozo.jpg";
 import periodicTable from "../assets/images/periodic-table.jpg";
-import bentoImages from "../assets/images/bento-images.png";
+import bentoImages from "../assets/images/bento-images.webp";
 import movieMatrix from "../assets/images/movie-matrix.jpg";
 import blogOne from "../assets/images/blog-one.jpeg";
 
@@ -59,6 +60,7 @@ export const techStack = [
   { iconName: "Html", icon: html },
   { iconName: "Css", icon: css },
   { iconName: "JavaScript", icon: javascript },
+  { iconName: "TypeScript", icon: typescript },
   { iconName: "React", icon: reactIcon },
   { iconName: "Redux", icon: redux },
   { iconName: "Tailwind", icon: tailwind },

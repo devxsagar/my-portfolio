@@ -15,7 +15,12 @@ const BentoImage = () => {
         // amount: 0.1,
       }}
     >
-      <img src={bentoImages} alt="bento-images" loading="lazy" />
+      <img
+        src={bentoImages}
+        alt="bento-images"
+        loading="lazy"
+        decoding="async"
+      />
     </motion.div>
   );
 };
