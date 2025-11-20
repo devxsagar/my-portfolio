@@ -42,7 +42,7 @@ const BentoAboutMe = () => {
         <p className="text-[14px] md:text-base font-suisse-regular text-text-secondary-alt mt-3 tracking-wide leading-relaxed">
           I build modern web applications using{" "}
           <span className="highlight">
-            React.js, JavaScript, and Tailwind CSS,
+            React, JavaScript, and Tailwind CSS,
           </span>{" "}
           focusing on creating interfaces that are both beautiful and
           functional. From responsive layouts to seamless user interactions, I

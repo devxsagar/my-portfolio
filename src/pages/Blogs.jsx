@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
-    <section className="w-full max-sm:px-[10px] max-md:px-[20px] xl:w-[1200px] mx-auto pt-40 pb-30 md:pb-40 lg:pb-50">
+    <section className="w-full min-h-screen max-sm:px-[10px] max-md:px-[20px] xl:w-[1200px] mx-auto  pt-30 lg:pt-40 pb-30 md:pb-40 lg:pb-50">
       <SectionHeader heading="Blogs" />
 
       <div className="px-[2rem] sm:px-[3rem] md:px-[4rem] lg:px-0">
@@ -20,11 +20,12 @@ const Blogs = () => {
                 whileHover="hovered"
                 className="cursor-pointer "
               >
-                <Link to={blog.href} target="_blank">
+                <Link to={blog.href} target="_blank" rel="noopener">
                   <div className="overflow-hidden rounded-xl">
                     <motion.img
                       src={blog.image}
                       alt={blog.title}
+                      loading="lazy"
                       variants={{
                         initial: { scale: 1 },
                         hovered: { scale: 1.05 },

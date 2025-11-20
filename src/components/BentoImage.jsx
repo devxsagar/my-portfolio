@@ -4,9 +4,10 @@ import { bentoImages } from "../data/images";
 const BentoImage = () => {
   return (
     <motion.div
-      initial={{ filter: "blur(5px)", y: 50, }}
+      initial={{ filter: "blur(5px)", y: 50 }}
       whileInView={{
-        filter: "blur(0px)", y: 0, 
+        filter: "blur(0px)",
+        y: 0,
         transition: { duration: 1, ease: "easeInOut" },
       }}
       viewport={{
@@ -14,7 +15,7 @@ const BentoImage = () => {
         // amount: 0.1,
       }}
     >
-      <img src={bentoImages} alt="bento-images"  loading="lazy" />
+      <img src={bentoImages} alt="bento-images" loading="lazy" />
     </motion.div>
   );
 };

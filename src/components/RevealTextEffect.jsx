@@ -23,7 +23,7 @@ const RevealTextEffect = ({ text }) => {
         }}
         viewport={{
           once: true,
-          amount: 0.3,
+          // amount: 0.1,
         }}
       >
         {l === " " ? "\u00A0" : l}

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { email, footerLinks } from "../utils/constants";
 import FooterLink from "./FooterLink";
 import confetti from "canvas-confetti";
+import RevealTextEffect from "./RevealTextEffect";
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -37,7 +38,7 @@ const Footer = () => {
           {/* Top */}
           <div className="flex items-center justify-center mt-5">
             <h2 className="text-3xl md:text-5xl font-suisse-medium text-center tracking-tight">
-              Let's get in touch!
+              <RevealTextEffect text="Let's get in touch!" />
             </h2>
           </div>
 
@@ -70,7 +71,7 @@ const Footer = () => {
 
           {/* Footer */}
           <div className="flex items-center justify-between text-[8px]  sm:text-xs">
-            <p>Made with ☕ and 🎧 by Sagar Mitra</p>
+            <p>Made with ☕ and 🎧 by Sagar Mitra </p>
             <p>Last updated November 2025</p>
           </div>
         </div>

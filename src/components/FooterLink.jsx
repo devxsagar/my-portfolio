@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FooterLink = ({ href, icon, linkName }) => {
   return (
-    <Link to={href} className="relative pt-5 pb-8">
+    <Link to={href} target="_blank" className="relative pt-5 pb-8">
       <motion.div initial="initial" whileHover="hovered" className="group">
         <motion.p
           variants={{
@@ -24,7 +24,7 @@ const FooterLink = ({ href, icon, linkName }) => {
           src={icon}
           alt={linkName}
           loading="lazy"
-          className="w-8 opacity-60 "
+          className="w-6 md:w-8 opacity-60 "
         />
       </motion.div>
     </Link>

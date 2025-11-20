@@ -10,7 +10,7 @@ const NavLink = ({ link }) => {
       whileHover="hovered"
       className="relative group text-text-primary"
     >
-      <Link to={link.href}  >
+      <Link target="_blank" to={link.href}  >
         <div
           className={`px-5 ${
             link.name === "Blog" ? "w-25" : "w-30"
