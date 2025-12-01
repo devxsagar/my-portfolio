@@ -46,7 +46,7 @@ const Navbar = () => {
           src={logo}
           alt="logo"
           loading="lazy"
-          className="w-5 md:w-7 lg:w-16"
+          className="w-10 md:w-12 lg:w-16"
         />
       </Link>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* Nav Links for Mobile & Tablet */}
       <div
-        className="lg:hidden relative"
+        className="lg:hidden relative flex items-center justify-center"
         onClick={() => setIsMenuClicked((prev) => !prev)}
       >
         <motion.span

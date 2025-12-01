@@ -72,7 +72,7 @@ const Footer = () => {
           {/* Footer */}
           <div className="flex items-center justify-between text-[8px]  sm:text-xs">
             <p>Made with ☕ and 🎧 by Sagar Mitra </p>
-            <p>Last updated November 2025</p>
+            <p>Last updated December 2025</p>
           </div>
         </div>
       </div>
