@@ -46,7 +46,7 @@ const Navbar = () => {
           src={logo}
           alt="logo"
           loading="lazy"
-          className="w-5 md:w-7 lg:w-8"
+          className="w-5 md:w-7 lg:w-16"
         />
       </Link>
 

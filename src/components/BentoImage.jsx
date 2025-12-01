@@ -14,6 +14,7 @@ const BentoImage = () => {
         once: true,
         // amount: 0.1,
       }}
+      className="w-full h-full"
     >
       <img
         src={bentoImages}
