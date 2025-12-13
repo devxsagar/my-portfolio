@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { jsLogo, pfp, reactLogo } from "../data/images";
+import { jsLogo, pfpHero, reactLogo } from "../data/images";
 import AboutMeHoverPopUp from "./AboutMeHoverPopUp";
 
 const HeroHeading = () => {
@@ -35,7 +35,7 @@ const HeroHeading = () => {
         Hi, I'm{" "}
         <span>
           <motion.img
-            src={pfp}
+            src={pfpHero}
             alt="profile-pic"
             loading="lazy"
             className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] object-cover object-top border border-border rounded-lg md:rounded-xl lg:rounded-2xl inline"

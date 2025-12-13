@@ -26,8 +26,9 @@ import instagram from "../assets/icons/instagram.svg";
 import twitter from "../assets/icons/twitter.svg";
 import linkedin from "../assets/icons/linkedin.svg";
 
-import logo from "../assets/images/navLogo.png";
+import logo from "/navLogo.png";
 import pfp from "../assets/images/pfp.png";
+import pfpHero from "/pfp-hero.jpg";
 import dozo from "../assets/images/dozo.jpg";
 import periodicTable from "../assets/images/periodic-table.jpg";
 import bentoImages from "../assets/images/bento-images.jpg";
@@ -47,6 +48,7 @@ export {
   hello,
   briefcase,
   pfp,
+  pfpHero,
   bentoImages,
   cursor,
   twitter,

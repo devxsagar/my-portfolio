@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { directionArrow } from "../data/images";
-import { email } from "../utils/constants";
 import HeroHeading from "../components/HeroHeading";
-import HeroFooter from "../components/HeroFooter";
 
 const Hero = () => {
   return (
