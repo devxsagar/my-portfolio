@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 useMousePosition.js
-SectionHeader2.jsx
+# SectionHeader2.jsx

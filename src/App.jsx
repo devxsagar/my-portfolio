@@ -20,7 +20,7 @@ const App = () => {
         lerp: 0.08,
       }}
     >
-      <div className="relative min-h-screen max-w-screen bg-bg-primary  font-suisse-regular">
+      <div className="relative min-h-screen max-w-screen bg-bg-primary  font-satoshi">
         <ScrollToTop />
         <Navbar />
         <main>

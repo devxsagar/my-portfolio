@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 
 const MobileNavLink = () => {
   return (
-    <div className="absolute -top-8 -right-8  w-screen md:w-screen h-screen bg-bg-primary rounded-lg flex flex-col items-center gap-y-5 md:gap-y-10 px-10 py-50 text-2xl md:text-4xl tracking-wide ">
+    <div className="absolute -top-8 -right-8  w-screen md:w-screen h-screen bg-bg-primary rounded-lg flex flex-col items-center gap-y-5 md:gap-y-10 px-10 py-50 text-2xl md:text-4xl font-medium tracking-wide ">
       {navLinks.map((link, index) => {
         return (
           <Link key={index} to={link.href}>

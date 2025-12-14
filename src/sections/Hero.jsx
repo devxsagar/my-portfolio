@@ -24,7 +24,7 @@ const Hero = () => {
               mass: 2,
             }}
           >
-            <h2 className="text-xs md:text-sm xl:text-base text-text-secondary uppercase font-[590] font-suisse-regular">
+            <h2 className="text-xs md:text-sm xl:text-base text-text-secondary uppercase font-satoshi">
               software engineer
             </h2>
             <img

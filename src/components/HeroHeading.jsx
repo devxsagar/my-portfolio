@@ -13,8 +13,8 @@ const HeroHeading = () => {
 
   return (
     <div
-      className="w-full md:w-[700px] lg:w-full font-suisse-medium 
-      text-[28px] leading-9 md:text-[36px] md:leading-11 lg:text-[40px] lg:leading-12 xl:text-[46px] xl:leading-[56px] tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]"
+      className="w-full md:w-[700px] lg:w-full font-satoshi font-bold
+      text-[30px] leading-10 md:text-[42px] md:leading-11 lg:text-[40px] lg:leading-12 xl:text-[50px] xl:leading-[56px] tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]"
     >
       <motion.h1
         className="group w-fit mx-auto text-text-secondary text-center select-none"
@@ -64,7 +64,7 @@ const HeroHeading = () => {
           mass: 2,
         }}
       >
-        a frontend developer{" "}
+        a frontend{" "}
         <span>
           <motion.img
             src={reactLogo}
@@ -79,11 +79,11 @@ const HeroHeading = () => {
             transition={{ duration: 0.2 }}
           />
         </span>{" "}
-        who loves{" "}
+        developer who loves{" "}
         <span className="hidden lg:inline">
           <br />
         </span>{" "}
-        turning ideas{" "}
+        turning ideas into reality{" "}
         <span>
           <motion.img
             src={jsLogo}
@@ -98,7 +98,7 @@ const HeroHeading = () => {
             transition={{ duration: 0.2 }}
           />
         </span>{" "}
-        into reality through code.
+        through code.
       </motion.h2>
     </div>
   );

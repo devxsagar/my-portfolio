@@ -23,7 +23,7 @@ const Footer = () => {
     setTimeout(() => {
       setCopied(false);
       // confetti.reset()
-    }, 3000);
+    }, 1000);
   };
 
   return (
@@ -37,7 +37,7 @@ const Footer = () => {
         >
           {/* Top */}
           <div className="flex items-center justify-center mt-5">
-            <h2 className="text-3xl md:text-5xl font-suisse-medium text-center tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-satosi font-medium text-center tracking-tight">
               <RevealTextEffect text="Let's get in touch!" />
             </h2>
           </div>
@@ -51,11 +51,11 @@ const Footer = () => {
               transition={{ duration: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <p className="text-sm md:text-lg font-suisse-book opacity-60 tracking-widest pl-2  md:pl-5">
+              <p className="text-sm md:text-lg font-space-grotesk text-text-secondary tracking-widest pl-2 md:pl-5">
                 {email}
               </p>
               <button
-                className="text-center max-md:text-sm bg-blue shadow-lg  w-25 h-10 md:w-35 md:h-15 rounded-full tracking-wider text-primary cursor-pointer text-white"
+                className="text-center max-md:text-sm bg-blue shadow-lg  w-25 h-10 md:w-35 md:h-15 rounded-full font-medium tracking-wider text-primary cursor-pointer text-white"
                 onClick={handleEmailClickButton}
               >
                 {copied ? "Copied" : "Copy Email"}
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between text-[8px]  sm:text-xs">
+          <div className="flex items-center justify-between text-[8px] sm:text-xs">
             <p>Made with ☕ and 🎧 by Sagar Mitra </p>
             <p>Last updated December 2025</p>
           </div>

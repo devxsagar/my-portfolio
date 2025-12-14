@@ -1,12 +1,13 @@
 import Marquee from "../components/Marquee";
 import SectionHeader from "../components/SectionHeader";
+import SectionHeader2 from "../components/SectionHeader2";
 
 const TechStack = () => {
   return (
     <section className="pt-40 md:pt-52 lg:pt-58 pb-30 md:pb-40 lg:pb-50">
-      <SectionHeader
+      <SectionHeader2
         heading="What I Build With"
-        subHeading="Tools that fuel my creativity and clean code"
+        subheading="Tools that fuel my creativity"
       />
 
       <div className="container mx-auto">

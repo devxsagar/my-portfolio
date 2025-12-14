@@ -11,7 +11,7 @@ const FooterLink = ({ href, icon, linkName }) => {
             hovered: { y: 20, filter: "blur(0px)" },
           }}
           transition= {{ duration: 0.3, ease: "easeInOut" }}
-          className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-suisse-book group-hover:opacity-100"
+          className="absolute top-2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70 tracking-wide text-sm font-jakarta font-medium group-hover:opacity-100"
         >
           {linkName}
         </motion.p>

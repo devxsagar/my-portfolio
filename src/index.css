@@ -1,17 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import "tailwindcss";
 
 @font-face {
   font-family: "Suisse_Intl_Regular";
-  src: url("/fonts/fonnts.com-Suisse_Intl_Regular.ttf")
-    format("truetype");
+  src: url("/fonts/fonnts.com-Suisse_Intl_Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Suisse_Intl_Medium";
-  src: url("/fonts/fonnts.com-Suisse_Intl_Medium.ttf")
-    format("truetype");
+  src: url("/fonts/fonnts.com-Suisse_Intl_Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -37,8 +38,11 @@
 @theme {
   --breakpoint-xs: 400px;
 
+  --font-patrick-hand: "Patrick Hand", cursive;
+  --font-ibm-plex: "IBM Plex Mono", monospace;
+  --font-satoshi: "Satoshi", sans-serif;
   --font-caveat: "Caveat", cursive;
-  --font-metamorphous: "Metamorphous", serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
   --font-suisse-regular: "Suisse_Intl_Regular";
   --font-suisse-medium: "Suisse_Intl_Medium";
   --font-suisse-bold: "Suisse_Intl_Bold";

@@ -40,7 +40,7 @@ const Navbar = () => {
       {/* Logo  */}
       <Link
         to="/"
-        className="relative z-20 font-metamorphous text-lg md:text-xl lg:text-2xl xl:text-3xl"
+        className="relative z-20 text-lg md:text-xl lg:text-2xl xl:text-3xl"
       >
         <img
           src={logo}
@@ -51,7 +51,7 @@ const Navbar = () => {
       </Link>
 
       {/* Nav Links for Desktop */}
-      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-suisse-medium max-lg:hidden">
+      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-satoshi font-semibold max-lg:hidden">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}
