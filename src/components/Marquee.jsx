@@ -1,16 +1,37 @@
-import { motion } from "motion/react";
-import { techStack } from "../data/images";
+import { motion, useAnimation } from "motion/react";
+import { i, p } from "motion/react-client";
 
-const Marquee = () => {
+import { useEffect } from "react";
+
+const Marquee = ({ techStack, primary }) => {
+  const controls = useAnimation();
+
+  const animateMarquee = (duration) => {
+    controls.start({
+      x: primary ? "-100%" : "100%",
+      transition: {
+        duration,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    });
+  };
+
+  useEffect(() => {
+    animateMarquee(30);
+  }, [primary]);
+
   return (
     <motion.div
       className=" flex pb-5 sm:pb-7 lg:pb-10 shrink-0 overflow-y-hidden"
-      initial={{ x: 0 }}
-      animate={{ x: "-100%" }}
-      transition={{
-        duration: 30,
-        repeat: Infinity,
-        ease: "linear",
+      initial={{ x: primary ? "0%" : "-100%" }}
+      animate={{
+        x: primary ? "-100%" : "0%",
+        transition: {
+          duration : 30,
+          repeat: Infinity,
+          ease: "linear",
+        },
       }}
     >
       {techStack.map((tech, index) => {
@@ -25,10 +46,10 @@ const Marquee = () => {
               src={tech.icon}
               alt={`${tech.iconName}-logo`}
               loading="lazy"
-              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18"
+              className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
             />
             <motion.p
-              className="absolute left-5 sm:left-7 lg:left-8.5 -translate-y-[50%] top-[130%] -translate-x-1/2 text-base lg:text-lg whitespace-nowrap font-caveat"
+              className="absolute md:left-4.5 lg:left-8 -translate-y-[50%] top-[130%] -translate-x-1/2 max-md:hidden  md:text-base lg:text-lg whitespace-nowrap font-caveat pointer-events-none"
               variants={{ initial: { y: "120%" }, hovered: { y: 0 } }}
             >
               {tech.iconName}

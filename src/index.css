@@ -76,6 +76,6 @@
   } */
 
   .highlight {
-    @apply text-blue font-suisse-medium;
+    @apply text-blue font-satoshi font-medium;
   }
 }

@@ -1,138 +1,77 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
-import ProjectLinkButton from "./ProjectLinkButton";
+import { motion } from "motion/react";
+import ZoopButton from "./ZoopButton";
 
 const ProjectCard = ({
   i,
-  projectName,
+  projectNo,
   title,
-  description,
-  mobileDesc,
+  subheading,
   date,
   techStack,
   image,
-  bgColor,
-  textColor,
-  linkTextColor,
   githubLink,
   liveLink,
-  range,
-  progress,
-  targetScale,
 }) => {
-  const containerRef = useRef(null);
-
-  // scrollYProgress value ranges in between 0 to 1.
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "start 8%"],
-  });
-
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.8, 1]);
-  const scale = useTransform(progress, range, [1, targetScale]);
-
   return (
-    <article ref={containerRef} className="sticky top-10 lg:top-15">
-      <motion.div
-        className="p-4 sm:p-6 md:p-8 md:min-h-[350px] lg:min-h-[542px] max-w-md md:max-w-xl lg:w-full  lg:max-w-full mx-auto flex flex-col justify-between rounded-xl max-lg:gap-5 gap-6
-        shadow-[0_3px_10px_rgb(0,0,0,0.2)] relative "
-        style={{
-          backgroundColor: bgColor,
-          border: `4px solid #fafafa`,
-          scale,
-          top: `calc(${i * 30}px)`, // on scroll each card will appears slightly below the previous one
-        }}
-      >
-        {/* Date */}
-        <div className="flex gap-x-2 font-suisse-mono text-[10px] sm:text-xs md:text-sm uppercase text-text-white/70">
-          <p>{projectName}</p>
-          <p>•</p>
-          <p>{date}</p>
-        </div>
-        <div className="flex max-lg:flex-col-reverse justify-between max-lg:gap-8 gap-4">
-          {/* left side */}
-          <div className="w-full lg:w-[60%] flex flex-col justify-between gap-6 md:gap-12 lg:gap-5">
-            <div className="space-y-4 md:space-y-6">
-              {/* Title and Description */}
-              <div className="space-y-2 md:space-y-4">
-                <h3 className="text-base md:text-xl lg:text-3xl text-text-white font-suisse-medium leading-tight">
-                  {title}
-                </h3>
+    <motion.div
+      className="group relative flex flex-col justify-between rounded-3xl bg-[#F7F9FC] p-8 shadow-sm hover:shadow-lg"
+      initial={{ y: 30, opacity: 0, rotate: 0, filter: "blur(10px)" }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        transition: { duration: 0.8, ease: "linear" },
+      }}
+      whileHover={{
+        rotate: i % 2 === 0 ? 0.8 : -0.8,
+        transition: { duration: 0.3, ease: "linear" },
+      }}
 
-                {/* Description for Larger Screen  */}
-                <ul
-                  className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed list-disc pl-4 space-y-1 max-lg:hidden"
-                  style={{ color: textColor }}
-                >
-                  {description.map((desc, index) => {
-                    return <li key={index}>{desc}</li>;
-                  })}
-                </ul>
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      {/* Top Content */}
+      <div>
+        {/* Title / Label */}
+        <h3 className="mb-2 text-xs font-space-grotesk font-semibold tracking-[0.3em] text-blue/80 uppercase">
+          {title}
+        </h3>
 
-                {/* Description For Mobile Screen */}
-                <p
-                  className="text-xs md:text-sm lg:text-base font-suisse-regular leading-relaxed lg:hidden"
-                  style={{ color: textColor }}
-                >
-                  {mobileDesc}
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Main Heading */}
+        <p className="mb-8 max-w-[28rem] lg:max-w-[32rem] text-xl lg:text-2xl font-semibold leading-tight text-gray-900">
+          {subheading}
+        </p>
 
-          {/* Image Section */}
-          <div className="overflow-hidden flex items-center">
-            <motion.div
-              className="w-full lg:max-w-[550px]"
-              // style={{ scale: imageScale }}
-            >
-              <img
-                src={image}
-                alt="periodic-table"
-                loading="lazy"
-                className="rounded-xl object-cover "
-              />
-            </motion.div>
-          </div>
-        </div>
+        {/* Tech Stack */}
+        <p className="text-xs lg:text-sm font-medium font-space-grotesk tracking-wide text-gray-400 uppercase">
+          {techStack.map((tech, index) => {
+            return (
+              <span key={index}>
+                {tech}
+                {index !== techStack.length - 1 && (
+                  <span className="mx-1 lg:mx-2">·</span>
+                )}
+              </span>
+            );
+          })}
+        </p>
+      </div>
 
-        {/* Tech Stack and Links */}
-        <div className="flex max-lg:flex-col lg:items-center justify-between gap-6 md:gap-6 lg:gap-9">
-          {/* Tech Stack */}
-          <ul
-            className="lg:w-[55%] flex flex-wrap gap-2 sm:gap-3 font-suisse-mono select-none "
-            style={{ color: textColor }}
-          >
-            {techStack.map((tool, index) => {
-              return (
-                <li
-                  key={index}
-                  className="text-[8px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 sm:py-1.5 border border-text-white/70 rounded-md lg:rounded-lg"
-                >
-                  {tool}
-                </li>
-              );
-            })}
-          </ul>
+      {/* Actions */}
+      <div className="mt-8 flex gap-3">
+        <ZoopButton text="GitHub" link={githubLink} />
+        <ZoopButton text="Live" link={liveLink} primary />
+      </div>
 
-          {/* Links */}
-          <div className="flex items-center lg:justify-between gap-4 lg:w-[45%]">
-            <ProjectLinkButton
-              buttonName="GitHub"
-              link={githubLink}
-              linkTextColor={linkTextColor}
-              textColor={textColor}
-            />
-            <ProjectLinkButton
-              buttonName="Live"
-              link={liveLink}
-              linkTextColor={linkTextColor}
-              textColor={textColor}
-            />
-          </div>
-        </div>
-      </motion.div>
-    </article>
+      {/* Image */}
+      <div className="mt-10 flex justify-center overflow-hidden rounded-2xl">
+        <motion.img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="w-full object-cover rounded-2xl"
+        />
+      </div>
+    </motion.div>
   );
 };
 

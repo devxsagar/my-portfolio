@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { briefcase, hello, location, pfp } from "../data/images";
+import { briefcase, hello, location, pfp } from "../../data/images";
 
 const BentoAboutMe = () => {
   return (

@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useScroll } from "motion/react";
 import ProjectCard from "../components/ProjectCard";
 import projectInfo from "../data/projectsInfo";
-import SectionHeader2 from "../components/SectionHeader2";
+import SectionHeader from "../components/SectionHeader";
 
 const Project = () => {
   const containerRef = useRef();
@@ -12,12 +12,15 @@ const Project = () => {
   });
   return (
     <section className="w-full min-h-screen pt-16 md:pt-20 lg:pt-28">
-      <SectionHeader2 heading="Selected Projects" subheading="A snapshot of what I’ve been building" />
+      <SectionHeader
+        heading="Selected Projects"
+        subheading="A snapshot of what I’ve been building"
+      />
 
       {/* Project Cards */}
       <div
         ref={containerRef}
-        className="px-3 lg:px-0 flex flex-col gap-8 md:gap-10 "
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2"
       >
         {projectInfo.map((project, index) => {
           const targetScale = 1 - (projectInfo.length - index) * 0.05;

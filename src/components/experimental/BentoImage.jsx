@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { bentoImages } from "../data/images";
+import { bentoImages } from "../../data/images";
 
 const BentoImage = () => {
   return (

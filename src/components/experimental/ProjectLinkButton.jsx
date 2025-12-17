@@ -2,13 +2,13 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
-const ProjectLinkButton = ({ buttonName, link, linkTextColor, textColor }) => {
+const ProjectLinkButton = ({ buttonName, link, linkTextColor, textColor, linkBgColor, primary }) => {
   return (
     <motion.div initial="initial" whileHover="hovered">
       <Link
-        className={`flex items-center gap-1 overflow-hidden text-xs sm:text-sm md:text-base text-[var(--text-color)] font-suisse-regular cursor-pointer border-2 border-text-white/70 px-4 py-2 lg:px-20 lg:py-4 rounded-lg lg:rounded-2xl hover:bg-text-white hover:text-[var(--link-text-color)] transition`}
+        className={`flex items-center gap-1 overflow-hidden text-xs sm:text-sm md:text-base text-[var(--text-color)] font-space-grotesk cursor-pointer border-2 border-text-black/70 px-4 py-2 lg:px-6 lg:py-2 rounded-lg lg:rounded-2xl hover:text-[var(--link-text-color)] `}
         to={link}
-        style={{"--link-text-color": linkTextColor, "--text-color": textColor}}
+        style={{"--link-text-color": linkTextColor, "--text-color": textColor, "--link-bg-color": linkBgColor}}
       >
         {buttonName}{" "}
         <div className="relative w-4 h-4 sm:w-5 sm:h-5">

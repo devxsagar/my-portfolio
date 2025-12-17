@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, useMotionValue, useSpring } from "motion/react";
-import { UserRound } from "lucide-react";
+import { IconGhostFilled } from "@tabler/icons-react";
 
 const AboutMeHoverPopUp = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const AboutMeHoverPopUp = () => {
   return (
     <button onClick={() => navigate("/about-me")}>
       <motion.div
-        className="w-fit text-center text-sm lg:text-xl text-[#ffffff] bg-blue px-3 py-2 rounded-3xl hidden group-hover:flex items-center gap-3 font-satoshi font-semibold tracking-wide
+        className="w-fit text-center text-sm lg:text-xl text-[#ffffff] bg-blue px-3 py-2 rounded-3xl hidden group-hover:flex items-center gap-2 font-satoshi font-semibold tracking-wide
         shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]
         "
         style={{
@@ -43,7 +43,7 @@ const AboutMeHoverPopUp = () => {
         }}
       >
         <span className="inline-block">
-          <UserRound className="w-4 h-4 lg:w-6 lg:h-6" />
+          <IconGhostFilled className="w-4 h-4 lg:w-6 lg:h-6" />
         </span>
         <p>About Sagar</p>
       </motion.div>
