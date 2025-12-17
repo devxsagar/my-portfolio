@@ -9,7 +9,6 @@ const LifeBeyondCode = () => {
   const [active, setActive] = useState(1);
 
   const width = useWindowWidth();
-  console.log(width);
 
   const CARD_WIDTH = width < 1200 ? 200 : 300;
   const GAP = 90;

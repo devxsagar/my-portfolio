@@ -11,7 +11,7 @@ const SectionHeader = ({ heading, subheading="" }) => {
         {heading}
       </h2>
       <div >
-        <p className="max-sm:max-w-[70vw] mx-auto tracking-tight text-xl sm:text-2xl md:text-[2.5rem] font-satoshi font-medium mt-5 text-nowrap">
+        <p className="max-sm:max-w-[70vw] mx-auto tracking-tight text-xl sm:text-2xl md:text-[2.5rem] font-satoshi font-medium mt-5 break-after-avoid whitespace-normal text-center">
           {subheading && <RevealTextEffect text={subheading}/>}
         </p>
       </div>
