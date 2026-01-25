@@ -6,6 +6,11 @@ import javascript from "../assets/icons/javascript.svg";
 import typescript from "../assets/icons/typescript.svg";
 import reactIcon from "../assets/icons/react.svg";
 import redux from "../assets/icons/redux.svg";
+import nodejs from "../assets/icons/nodejs.svg";
+import mongodb from "../assets/icons/mongodb.svg";
+import expressjs from "../assets/icons/expressjs.svg";
+import postman from "../assets/icons/postman.svg";
+import jwt from "../assets/icons/jwt.svg";
 import tailwind from "../assets/icons/tailwind.svg";
 import shadcn from "../assets/icons/shadcn-ui.svg";
 import framerMotion from "../assets/icons/framer-motion.svg";
@@ -76,6 +81,8 @@ export {
   linkedin,
   githubLight,
   blogOne,
+  nodejs,
+  mongodb
 };
 
 export const techStack = [
@@ -86,11 +93,16 @@ export const techStack = [
   { iconName: "React", icon: reactIcon },
   { iconName: "Redux", icon: redux },
   { iconName: "Tailwind", icon: tailwind },
-  { iconName: "Git", icon: git },
-  { iconName: "GitHub", icon: github },
+  { iconName: "Nodejs", icon: nodejs },
+  { iconName: "Expressjs", icon: expressjs },
+  { iconName: "MongoDB", icon: mongodb },
+  { iconName: "JWT", icon: jwt },
 ];
 
 export const techStack2 = [
+  { iconName: "Git", icon: git },
+  { iconName: "GitHub", icon: github },
+  { iconName: "Postman", icon: postman },
   { iconName: "Shadcn", icon: shadcn },
   { iconName: "Framer Motion", icon: framerMotion },
   { iconName: "Vercel", icon: vercel },
