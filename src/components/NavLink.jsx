@@ -3,18 +3,17 @@ import { motion } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const NavLink = ({ link }) => {
-
   return (
     <motion.div
       initial="initial"
       whileHover="hovered"
       className="relative group text-text-primary"
     >
-      <Link to={link.href}  >
+      <Link to={link.href} target={link.name === "Resume" ? "_blank" : ""}>
         <div
           className={`px-5 ${
-            link.name === "Blog" ? "w-25" : "w-30"
-          } h-12 flex items-center overflow-hidden`}
+            link.name === "Blogs" ? "w-22" : "w-27"
+          } h-10 flex items-center overflow-hidden`}
         >
           {/* Background */}
           <motion.div

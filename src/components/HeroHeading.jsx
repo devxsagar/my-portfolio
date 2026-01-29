@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { jsLogo, pfpHero, reactLogo } from "../data/images";
+import {
+  jsLogo,
+  pfpHero,
+  reactLogo,
+  nodejsalt,
+  mongodbalt,
+} from "../data/images";
 import AboutMeHoverPopUp from "./AboutMeHoverPopUp";
 
 const HeroHeading = () => {
@@ -13,8 +19,8 @@ const HeroHeading = () => {
 
   return (
     <div
-      className="w-full md:w-[700px] lg:w-full font-satoshi font-bold
-      text-[30px] leading-10 md:text-[42px] md:leading-11 lg:text-[40px] lg:leading-12 xl:text-[50px] xl:leading-[56px] tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-[-1.4px]"
+      className="w-full md:w-[700px] lg:w-full font-bold
+      text-[35px] leading-10 md:text-[45px] md:leading-11 lg:text-[45px] lg:leading-12 xl:text-[55px] xl:leading-[56px] tracking-[-1px] md:tracking-[-1.2px] lg:tracking-[-1.3px] xl:tracking-tight mx-auto"
     >
       <motion.h1
         className="group w-fit mx-auto text-text-secondary text-center select-none"
@@ -64,8 +70,8 @@ const HeroHeading = () => {
           mass: 2,
         }}
       >
-        a frontend{" "}
-        <span>
+        a full-stack{" "}
+        <span className="max-md:hidden">
           <motion.img
             src={reactLogo}
             alt="react-logo"
@@ -79,15 +85,12 @@ const HeroHeading = () => {
             transition={{ duration: 0.2 }}
           />
         </span>{" "}
-        developer who loves{" "}
-        <span className="hidden lg:inline">
-          <br />
-        </span>{" "}
-        turning ideas into reality{" "}
-        <span>
+        developer crafting{" "}
+    
+        <span className="max-md:hidden">
           <motion.img
-            src={jsLogo}
-            alt="javascript-logo"
+            src={nodejsalt}
+            alt="nodejs-logo"
             loading="lazy"
             className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
             whileHover={{
@@ -98,8 +101,50 @@ const HeroHeading = () => {
             transition={{ duration: 0.2 }}
           />
         </span>{" "}
+        ideas
+        <span className="hidden lg:inline">
+          <br />
+        </span>{" "}
+        into real products{" "}
+        <span className="max-md:hidden">
+          <motion.img
+            src={mongodbalt}
+            alt="mongodb-logo"
+            loading="lazy"
+            className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] inline "
+            whileHover={{
+              // scale: 1.5,
+              rotate: 12,
+              transition: { duration: 0.2 },
+            }}
+            transition={{ duration: 0.2 }}
+          />
+        </span>{" "}
         through code.
       </motion.h2>
+
+      {/* <div className="flex items-center mt-10 justify-center">
+        <img
+          src={reactLogo}
+          alt=""
+          className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px]"
+        />
+        <img
+          src={jsLogo}
+          alt=""
+          className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] -ml-6"
+        />
+        <img
+          src={nodejs}
+          alt=""
+          className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] -ml-6"
+        />
+        <img
+          src={mongodb}
+          alt=""
+          className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px] xl:w-[62px] xl:h-[62px] -ml-6"
+        />
+      </div> */}
     </div>
   );
 };

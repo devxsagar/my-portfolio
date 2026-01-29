@@ -6,13 +6,13 @@ export const location = "Kolkata, India";
 
 export const navLinks = [
   { name: "Projects", href: "/projects" },
-  { name: "Resume", href: "https://drive.google.com/file/d/1n5F-GwZalHWNm4OKLnXMvI2CrpK9TD7e/view" },
+  { name: "Resume", href: "https://drive.google.com/file/d/1ktJSsLkc0I1Gk5ux9xkT8E89yDdtMoYA/view?usp=sharing" },
   { name: "Blogs", href: "/blogs" },
   ];
 
 export const footerLinks = [
   { linkName: "Linkedin", href: "https://www.linkedin.com/in/sagar-mitra19/", icon: linkedin },
-  { linkName: "X/Twitter", href: "https://x.com/devxsagar", icon: twitter },
+  { linkName: "X (Twitter)", href: "https://x.com/devxsagar", icon: twitter },
   { linkName: "Instagram", href: "https://www.instagram.com/devxsagar/", icon: instagram },
   { linkName: "GitHub", href: "https://github.com/devxsagar", icon: githubLight },
 ];

@@ -32,9 +32,9 @@ const Navbar = () => {
       transition={{ duration: 1, ease: "easeInOut" }}
       className="
       border border-border
-      fixed top-5 left-1/2 -translate-x-1/2 
-      rounded-4xl w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-12 
-      flex items-center justify-between px-4 lg:pl-10 py-3 z-15
+      fixed top-8 md:top-5 left-1/2 -translate-x-1/2 rounded-2xl
+      lg:rounded-3xl w-[calc(100%-60px)] xl:min-w-3xl xl:w-3xl min-h-12 
+      flex items-center justify-between px-4 lg:px-3 lg:pl-8 py-3 z-15
       backdrop-blur-md"
     >
       {/* Logo  */}
@@ -46,12 +46,12 @@ const Navbar = () => {
           src={logo}
           alt="logo"
           loading="lazy"
-          className="w-10 md:w-12 lg:w-16"
+          className="w-8 md:w-10 lg:w-12"
         />
       </Link>
 
       {/* Nav Links for Desktop */}
-      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-satoshi font-semibold max-lg:hidden">
+      <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-semibold max-lg:hidden">
         {navLinks.map((link, index) => {
           return <NavLink key={index} link={link} />;
         })}

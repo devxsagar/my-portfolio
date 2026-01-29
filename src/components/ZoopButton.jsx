@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 
-const ZoopButton = ({ text, link, primary }) => {
+const ZoopButton = ({ text, link, textColor }) => {
   return (
     <motion.a
       initial="initial"
@@ -10,15 +10,39 @@ const ZoopButton = ({ text, link, primary }) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className={` flex items-center gap-2 rounded-full border ${
-        primary
-          ? "border-gray-900 bg-gray-900 text-white"
-          : "border-gray-300 bg-white text-gray-700"
-      } px-5 py-2 text-sm font-medium  shadow-sm transition ${primary ? "hover:bg-white hover:text-gray-700 hover:border-gray-300" : "hover:bg-gray-900 hover:text-white"}   cursor-pointer`}
+      className={` flex relative overflow-hidden items-center gap-2`}
       style={{ lineHeight: 1.1 }}
     >
-      {text === "GitHub" ? <IconBrandGithub size={16} /> : <IconExternalLink size={16} />}
-      <div className="relative overflow-hidden">
+      <motion.div
+        variants={{ initial: { y: 0, color: "#e9d9f7" }, hovered: { y: "-170%" } }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+      >
+        {text === "GitHub" ? (
+          <IconBrandGithub className="w-5 h-5" />
+        ) : (
+          <IconExternalLink className="w-5 h-5" />
+        )}
+      </motion.div>
+
+      <motion.div
+        className="absolute"
+        variants={{ initial: { y: "170%" }, hovered: { y: "0", color: textColor, } }}
+        transition={{
+          duration: 0.3,
+          ease: "easeInOut",
+        }}
+      >
+        {text === "GitHub" ? (
+          <IconBrandGithub className="w-5 h-5" />
+        ) : (
+          <IconExternalLink className="w-5 h-5" />
+        )}
+      </motion.div>
+
+      {/* <div className="relative overflow-hidden">
         <div>
           {text.split("").map((l, i) => {
             return (
@@ -55,7 +79,7 @@ const ZoopButton = ({ text, link, primary }) => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </motion.a>
   );
 };

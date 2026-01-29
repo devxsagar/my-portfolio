@@ -1,22 +1,29 @@
+import GitHub from "../components/GitHub";
 import KnowMe from "../components/KnowMe";
 import LifeBeyondCode from "../components/LifeBeyondCode";
+import OnMyShelf from "../components/OnMyShelf";
 
 const AboutMe = () => {
   return (
-    <div className="relative min-h-screen pt-30 pb-30 md:pb-40 lg:pb-50">
-      <div className="w-full xl:w-[1200px] px-[2rem] sm:px-[3rem] md:px-[4rem] lg:px-[5rem] mx-auto">
-        {/* Top */}
+    <section className="relative min-h-screen p-2 ">
+      {/* <div className="pb-30 md:pb-40 lg:pb-50 border border-white "> */}
+      <div className="pt-30 pb-30 rounded-4xl bg-bg-secondary mb-2">
         <KnowMe />
+      </div>
 
-        {/* Experience */}
-        {/* <section className="mt-20 md:mt-24 lg:mt-28">
-          <SectionHeader heading="Experience" />
-        </section> */}
+      {/* <div className="rounded-4xl bg-bg-secondary pt-16 md:pt-20 lg:pt-28 pb-30 mb-2">
+        <GitHub />
+      </div> */}
 
-        {/* Life Beyond Code */}
+      <div className="rounded-4xl bg-bg-secondary pt-16 md:pt-20 lg:pt-28 pb-30 mb-2">
         <LifeBeyondCode />
       </div>
-    </div>
+
+      <div className="rounded-4xl bg-bg-secondary pt-16 md:pt-20 lg:pt-28 pb-30">
+        <OnMyShelf />
+      </div>
+      {/* </div> */}
+    </section>
   );
 };
 

@@ -1,40 +1,22 @@
-import { useRef } from "react";
-import { useScroll } from "motion/react";
-import ProjectCard from "../components/ProjectCard";
 import projectInfo from "../data/projectsInfo";
 import SectionHeader from "../components/SectionHeader";
+import ProjectCard from "../components/ProjectCard";
 
 const Project = () => {
-  const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
   return (
-    <section className="w-full min-h-screen pt-16 md:pt-20 lg:pt-28">
-      <SectionHeader
-        heading="Selected Projects"
-        subheading="A snapshot of what I’ve been building"
-      />
+    <section className="relative w-full min-h-screen pt-16 md:pt-20 lg:pt-28 pb-30  bg-bg-secondary rounded-4xl mb-2 max-sm:px-2 md:px-10">
+      <div className="w-full max-w-7xl mx-auto">
+        <SectionHeader
+          heading="Selected Projects"
+          subheading="A snapshot of what I’ve been building"
+        />
 
-      {/* Project Cards */}
-      <div
-        ref={containerRef}
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2"
-      >
-        {projectInfo.map((project, index) => {
-          const targetScale = 1 - (projectInfo.length - index) * 0.05;
-          return (
-            <ProjectCard
-              key={index}
-              {...project}
-              i={index}
-              range={[index * 0.2, 1]}
-              progress={scrollYProgress}
-              targetScale={targetScale}
-            />
-          );
-        })}
+        {/* Project Cards */}
+        <div className="mx-auto w-full  max-w-6xl space-y-10 md:space-y-12 lg:space-y-16">
+          {projectInfo.slice(0, 3).map((project, index) => {
+            return <ProjectCard key={index} {...project} i={index} />;
+          })}
+        </div>
       </div>
     </section>
   );

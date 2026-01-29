@@ -27,10 +27,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-text-primary bg-bg-secondary rounded-t-4xl overflow-hidden">
+    <footer className="text-text-primary bg-bg-secondary rounded-4xl overflow-hidden">
       <div className="relative pt-8 pb-5 lg:py-10 ">
-        {/* Background Pattern */}
-
         <div
           className="flex flex-col justify-between
         w-[calc(100%-30px)] xl:min-w-[1200px] xl:w-[1200px] min-h-[25rem] md:min-h-[28rem] mx-auto relative z-50"
@@ -51,7 +49,7 @@ const Footer = () => {
               transition={{ duration: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <p className="text-sm md:text-lg font-space-grotesk text-text-secondary tracking-widest pl-2 md:pl-5">
+              <p className="text-sm md:text-lg  text-text-secondary tracking-widest pl-2 md:pl-5">
                 {email}
               </p>
               <button
@@ -70,9 +68,9 @@ const Footer = () => {
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between text-[8px] sm:text-xs">
+          <div className="flex items-center justify-between max-lg:flex-col gap-2 text-[8px] sm:text-xs">
             <p>Made with ☕ and 🎧 by Sagar Mitra </p>
-            <p>Last updated December 2025</p>
+            <p>Last updated January 2026</p>
           </div>
         </div>
       </div>

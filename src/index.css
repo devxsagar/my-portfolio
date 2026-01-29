@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/satoshi");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
-
 
 @theme {
   --breakpoint-xs: 400px;
@@ -10,10 +11,12 @@
   --font-satoshi: "Satoshi", sans-serif;
   --font-caveat: "Caveat", cursive;
   --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-onest: "Onest", sans-serif;
+  --font-jetbrains: "JetBrains Mono", monospace;
 
-  --color-bg-white: #ffffff;
+  --color-bg-white: #f5f5f5;
   --color-bg-primary: #fafafa;
-  --color-bg-secondary: #f5f5f5;
+  --color-bg-secondary: #ffffff;
   --color-bg-black: #1a1a1a;
 
   --color-text-primary: #000000;
@@ -25,6 +28,10 @@
   --color-border: #d1d5db;
   --color-orange: #db4500;
   --color-blue: #0057ff;
+}
+
+body {
+  background-color: #1a1a1a;
 }
 
 .hover-transition {

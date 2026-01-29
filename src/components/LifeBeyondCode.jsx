@@ -12,10 +12,10 @@ const LifeBeyondCode = () => {
 
   const CARD_WIDTH = width < 1200 ? 200 : 300;
   const GAP = 90;
-  const DRAG_THRESHOLD = 50;
+  const DRAG_THRESHOLD = 20;
 
   return (
-    <section className="mt-20 md:mt-24 lg:mt-28">
+    <section className=" w-full xl:w-[1200px] px-[2rem] sm:px-[3rem] md:px-[4rem] lg:px-[5rem] mx-auto">
       <div className="flex flex-col items-center justify-center">
         <SectionHeader
           heading="Life Beyond Code"
@@ -24,34 +24,54 @@ const LifeBeyondCode = () => {
       </div>
 
       <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden rounded-2xl">
-         <p className="absolute top-5 font-caveat text-sm lg:text-lg text-text-secondary">( Drag to explore )</p>
+        <p className="absolute top-5 font-caveat text-sm lg:text-lg text-text-secondary">
+          ( Drag to explore )
+        </p>
         <motion.div
           className="absolute inset-0 cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           onDragEnd={(e, info) => {
-            if (
-              info.offset.x < -DRAG_THRESHOLD ||
-              info.offset.y < -DRAG_THRESHOLD
-            ) {
-              setActive((p) => {
-                if (p !== 14) {
-                  return Math.min(p + 1, bentoImages.length - 1);
-                } else {
-                  return 0;
-                }
-              });
+            // if (
+            //   info.offset.x < -DRAG_THRESHOLD ||
+            //   info.offset.y < -DRAG_THRESHOLD
+            // ) {
+            //   setActive((p) => {
+            //     if (p !== bentoImages.length - 1) {
+            //       return Math.min(p + 1, bentoImages.length - 1);
+            //     } else {
+            //       return 0;
+            //     }
+            //   });
+            // }
+            // if (
+            //   info.offset.x > DRAG_THRESHOLD ||
+            //   info.offset.y > DRAG_THRESHOLD
+            // ) {
+            //   setActive((p) => Math.max(p - 1, 0));
+            // }
+
+            if (info.offset.x < -DRAG_THRESHOLD) {
+              // swipe left → next
+              setActive((prev) =>
+                prev === bentoImages.length - 1 ? 0 : prev + 1,
+              );
             }
-            if (
-              info.offset.x > DRAG_THRESHOLD ||
-              info.offset.y > DRAG_THRESHOLD
-            ) {
-              setActive((p) => Math.max(p - 1, 0));
+
+            if (info.offset.x > DRAG_THRESHOLD) {
+              // swipe right → previous
+              setActive((prev) =>
+                prev === 0 ? bentoImages.length - 1 : prev - 1,
+              );
             }
           }}
         >
           {bentoImages.map((item, index) => {
-            const offset = index - active;
+            const total = bentoImages.length;
+            let offset = index - active;
+
+            if (offset > total / 2) offset -= total;
+            if (offset < -total / 2) offset += total;
 
             let x = 0;
             let y = 0;
@@ -112,11 +132,9 @@ const LifeBeyondCode = () => {
         </motion.div>
 
         {/* Controls */}
-        {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 opacity-50">
-          <button
+          {/* <button
             onClick={() => setActive((p) => Math.max(p - 1, 0))}
-            className="px-2 py-2 rounded-lg
-            "
+            className="px-2 py-2 rounded-lg absolute  left-10 -translate-x-1/2 text-text-primary/40"
           >
             <IconChevronLeft />
           </button>
@@ -130,11 +148,10 @@ const LifeBeyondCode = () => {
                 }
               })
             }
-            className="px-2 py-2 rounded-lg"
+            className="px-2 py-2 rounded-lg absolute  right-1 -translate-x-1/2 text-text-primary/40 hover:text-blue hover-transition"
           >
             <IconChevronRight />
-          </button>
-        </div> */}
+          </button> */}
 
         {/* Left fade */}
         <div className="pointer-events-none absolute left-0 top-0 h-full w-2 bg-gradient-to-r from-[#fafafa] via-white/80 to-transparent z-10"></div>
@@ -147,11 +164,7 @@ const LifeBeyondCode = () => {
 
         {/* Bottom fade */}
         <div className="pointer-events-none absolute bottom-0 left-0 w-full h-2 bg-gradient-to-t from-[#fafafa] via-white/80 to-transparent z-10" />
-
-        
-     
       </div>
-
     </section>
   );
 };

@@ -4,8 +4,8 @@ import TechStack from "../sections/TechStack";
 
 const Home = () => {
   return (
-    <main >
-      <div className="w-full max-sm:px-[10px] max-md:px-[20px] xl:w-[1200px] mx-auto">
+    <main>
+      <div className="w-full  p-2 mx-auto  ">
         <Hero />
         <Project />
         <TechStack />
