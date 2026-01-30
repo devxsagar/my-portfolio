@@ -26,10 +26,10 @@ const Hero = () => {
               }}
             >
               <h2 className="text-xs md:text-sm text-text-secondary uppercase font-space-grotesk">
-                software developer
+                software engineer
               </h2>
               <img
-                className="h-[75px] md:h-[100px] lg:h-[120px] xl:h-[130px] absolute z-20 -top-4 -right-16 md:-top-5 md:-right-24 lg:-right-28 rotate-170 md:rotate-170 opacity-50 select-none pointer-events-none"
+                className="h-[75px] md:h-[100px] lg:h-[120px] xl:h-[130px] absolute z-10 -top-4 -right-16 md:-top-5 md:-right-24 lg:-right-28 rotate-170 md:rotate-170 opacity-50 select-none pointer-events-none"
                 src={directionArrow}
                 alt="arrow"
                 loading="lazy"

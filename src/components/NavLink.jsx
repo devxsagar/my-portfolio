@@ -2,24 +2,26 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
-const NavLink = ({ link }) => {
+const NavLink = ({ label, link }) => {
+
+  console.log(label);
   return (
     <motion.div
       initial="initial"
       whileHover="hovered"
       className="relative group text-text-primary"
     >
-      <Link to={link.href} target={link.name === "Resume" ? "_blank" : ""}>
+      <Link to={link} target={label === "Resume" ? "_blank" : ""}>
         <div
           className={`px-5 ${
-            link.name === "Blogs" ? "w-22" : "w-27"
+            label === "Blogs" ? "w-22" : "w-27"
           } h-10 flex items-center overflow-hidden`}
         >
           {/* Background */}
           <motion.div
             className={`
               ${
-                link.name === "Resume" &&
+                label === "Resume" &&
                 "group-hover:bg-gradient-to-tl from-[#3b82f6] via-[#4f46e5] to-[#4338ca]"
               } bg-bg-black absolute left-0 top-1/2 -translate-y-1/2 -z-10 group-hover:left-0 transition-all duration-300 ease-linear rounded-full max-lg:hidden`}
             variants={{
@@ -61,7 +63,7 @@ const NavLink = ({ link }) => {
               transition={{ duration: 0.3, ease: "linear" }}
             >
               {" "}
-              {link.name}
+              {label}
             </motion.p>
           </motion.div>
         </div>

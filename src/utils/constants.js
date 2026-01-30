@@ -5,9 +5,9 @@ export const email = "mitrasagar10@gmail.com";
 export const location = "Kolkata, India";
 
 export const navLinks = [
-  { name: "Projects", href: "/projects" },
-  { name: "Resume", href: "https://drive.google.com/file/d/1ktJSsLkc0I1Gk5ux9xkT8E89yDdtMoYA/view?usp=sharing" },
-  { name: "Blogs", href: "/blogs" },
+  { label: "Projects", link: "/projects" },
+  { label: "Resume", link: "https://drive.google.com/file/d/1ktJSsLkc0I1Gk5ux9xkT8E89yDdtMoYA/view?usp=sharing" },
+  { label: "Blogs", link: "/blogs" },
   ];
 
 export const footerLinks = [

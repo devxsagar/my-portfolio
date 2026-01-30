@@ -1,45 +1,70 @@
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
-import { navLinks } from "../utils/constants";
-import { X } from "lucide-react";
 
-const MobileNavLink = () => {
+const panelVariants = {
+  hidden: {
+    x: "100%",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+      when: "beforeChildren",
+      staggerChildren: 0.12,
+    },
+  },
+  exit: {
+    x: "100%",
+    transition: { duration: 0.35, ease: "easeInOut" },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
+const MobileNavLink = ({ items = [], onClose }) => {
   return (
-    <div className="absolute -top-8 -right-8  w-screen md:w-screen h-screen bg-bg-primary rounded-lg flex flex-col items-center gap-y-5 md:gap-y-10 px-10 py-50 text-2xl md:text-4xl font-medium tracking-wide ">
-      {navLinks.map((link, index) => {
-        return (
-          <Link key={index} to={link.href}>
-            <motion.span
-              initial={{ y: -20, opacity: 0 }}
-              animate={{
-                y: 0,
-                opacity: 1,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 200,
-                damping: 5,
-                delay: index * 0.3,
-              }}
-              className="inline-block"
-            >
-              {link.name}
-            </motion.span>
-          </Link>
-        );
-      })}
-
-      <motion.span
-        className="inline-block absolute top-9 right-8"
-        initial={{ rotate: 0 }}
-        whileTap={{
-          rotate: 180,
-          transition: { duration: 0.1, ease: "linear" },
-        }}
+    <AnimatePresence>
+      <motion.aside
+        className="
+          fixed inset-y-15 -right-1 w-[80%] sm:w-[50%]
+          bg-bg-secondary border-l border-border rounded-xl
+          backdrop-blur-4xl z-40 px-8 py-20 border h-[85vh]
+        "
+        variants={panelVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
-        <X className=" z-50 md:w-12 md:h-8" />
-      </motion.span>
-    </div>
+        <ul className="space-y-6">
+          {items.map((item, index) => (
+            <motion.li
+              key={index}
+              variants={itemVariants}
+              className="text-3xl font-semibold"
+            >
+              <Link
+                to={item.link}
+                onClick={onClose}
+                className="flex items-center gap-4 hover:text-primary transition"
+              >
+                <span className="text-lg opacity-50">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                {item.label}
+              </Link>
+            </motion.li>
+          ))}
+        </ul>
+      </motion.aside>
+    </AnimatePresence>
   );
 };
 

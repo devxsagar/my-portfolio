@@ -7,7 +7,7 @@ const FooterLink = ({ href, icon, linkName }) => {
       <motion.div initial="initial" whileHover="hovered" className="group">
         <motion.p
           variants={{
-            initial: { y: -30, filter: "blur(6px)", color: "5c5c63" },
+            initial: { y: -30, filter: "blur(6px)", color: "#5c5c63" },
             hovered: { y: 20, filter: "blur(0px)", color: "#0057ff" },
           }}
           transition= {{ duration: 0.3, ease: "easeInOut" }}

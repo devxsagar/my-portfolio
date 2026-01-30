@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
+
 import { navLinks } from "../utils/constants";
 import NavLink from "./NavLink";
 import { logo } from "../data/images";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import MobileNavLink from "./MobileNavLink";
 
@@ -53,27 +54,32 @@ const Navbar = () => {
       {/* Nav Links for Desktop */}
       <div className="text-sm lg:text-base flex items-center gap-2 lg:gap-6 font-semibold max-lg:hidden">
         {navLinks.map((link, index) => {
-          return <NavLink key={index} link={link} />;
+          return <NavLink key={index} {...link} />;
         })}
       </div>
 
       {/* Nav Links for Mobile & Tablet */}
-      <div
-        className="lg:hidden relative flex items-center justify-center"
-        onClick={() => setIsMenuClicked((prev) => !prev)}
-      >
+      <div className="lg:hidden  flex items-center justify-center">
         <motion.span
-          className="inline-block"
-          initial={{ rotate: 0 }}
-          whileTap={{
-            rotate: -180,
-            transition: { duration: 0.1, ease: "linear" },
-          }}
+          className="inline-block relative z-60"
+          animate={{ rotate: isMenuClicked ? 90 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          onClick={() => setIsMenuClicked((prev) => !prev)}
         >
-          <Menu className="md:w-12 md:h-8" />
+          {isMenuClicked ? (
+            <X className="md:w-12 md:h-8" />
+          ) : (
+            <Menu className="md:w-12 md:h-8" />
+          )}
         </motion.span>
 
-        {isMenuClicked && <MobileNavLink />}
+        {isMenuClicked && (
+          <MobileNavLink
+            position="right"
+            items={navLinks}
+            onClose={() => setIsMenuClicked(false)}
+          />
+        )}
       </div>
     </motion.nav>
   );
