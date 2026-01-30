@@ -4,7 +4,6 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const NavLink = ({ label, link }) => {
 
-  console.log(label);
   return (
     <motion.div
       initial="initial"
